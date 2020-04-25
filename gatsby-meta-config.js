@@ -3,7 +3,7 @@ module.exports = {
   description: `A technical blog`,
   author: `Anirudh Sharma`,
   introduction: `Love to learn and share about technology`,
-  siteUrl: `https://redquark.org/`, // Your blog site url
+  siteUrl: `https://localhost:8080/`, // Your blog site url
   social: {
     twitter: `I_am_Anirudh`,
     github: `ani03sha`,

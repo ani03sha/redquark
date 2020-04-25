@@ -1,9 +1,11 @@
 @import '../styles/variables.scss';
 @import '../styles/light-theme.scss';
 @import '../styles/dark-theme.scss';
+@import 'https://fonts.googleapis.com/css?family=Inconsolata';
 
 body {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Inconsolata', sans-serif;
+  color: hsla(0,0%,0%,0.8);
   background-color: $light-background-color;
   -webkit-text-size-adjust: antialiased;
   -moz-osx-font-smoothing: grayscale;
