@@ -17,6 +17,7 @@ import * as ScrollManager from '../utils/scroll'
 
 import '../styles/code.scss'
 import 'katex/dist/katex.min.css'
+import { ThemeSwitch } from '../components/theme-switch'
 
 export default ({ data, pageContext, location }) => {
   useEffect(() => {

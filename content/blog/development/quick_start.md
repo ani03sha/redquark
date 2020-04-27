@@ -1,7 +1,7 @@
 ---
 title: 'Quick Start'
 date: 2019-5-31 16:21:13
-category: 'development'
+category: 'aem'
 draft: false
 ---
 
