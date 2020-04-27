@@ -1,12 +1,12 @@
 @import '../styles/variables.scss';
 @import '../styles/light-theme.scss';
 @import '../styles/dark-theme.scss';
-@import 'https://fonts.googleapis.com/css?family=Inconsolata';
 
 body {
-  font-family: 'Inconsolata', sans-serif;
+  font-family: 'Consolas';
   color: hsla(0,0%,0%,0.8);
-  background-color: $light-background-color;
+  background-color: #EEEEEE;
+  font-size: larger;
   -webkit-text-size-adjust: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: background-color 0.3s, color 0.3s;
