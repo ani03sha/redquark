@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-bee",
+  "name": "redquark",
   "private": true,
-  "description": "Gatsby blog starter template",
+  "description": "Personal website for my blog and portfolio",
   "version": "0.1.0",
-  "author": "Jbee[JaeYeopHan]<ljyhanll@gmail.com>",
+  "author": "Anirudh Sharma",
   "bugs": {
-    "url": "https://github.com/JaeYeopHan/gatsby-starter-bee/issues"
+    "url": "https://github.com/ani03sha/redquark/issues"
   },
   "dependencies": {
     "gatsby": "^2.2.8",
@@ -15,6 +15,7 @@
     "gatsby-plugin-lodash": "^3.0.5",
     "gatsby-plugin-manifest": "^2.0.24",
     "gatsby-plugin-offline": "^2.0.25",
+    "gatsby-plugin-paginate": "^1.12.0",
     "gatsby-plugin-react-helmet": "^3.0.10",
     "gatsby-plugin-sass": "^2.0.11",
     "gatsby-plugin-sharp": "^2.0.30",
@@ -65,7 +66,7 @@
     "recursive-readdir": "^2.2.2",
     "signale": "^1.3.0"
   },
-  "homepage": "https://github.com/JaeYeopHan/gatsby-starter-bee#readme",
+  "homepage": "https://github.com/ani03sha/redquark#readme",
   "keywords": [
     "gatsby"
   ],
@@ -73,7 +74,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JaeYeopHan/gatsby-starter-bee.git"
+    "url": "git+https://github.com/ani03sha/redquark.git"
   },
   "scripts": {
     "post": "gatsby-post-gen",

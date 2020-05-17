@@ -4,6 +4,36 @@ module.exports = {
   siteMetadata: metaConfig,
   plugins: [
     {
+      resolve: `gatsby-plugin-paginate`,
+      options: {
+        sources: [
+          {
+            path: `/page`,
+            pageSize: 2,
+            template: `${__dirname}/src/templates/blog-post.js`,
+            serialize: (results) => results.allMarkdownRemark.edges,
+            query: `{
+              allMarkdownRemark {
+                edges {
+                  node {
+                    excerpt(pruneLength: 250)
+                    html
+                    id
+                    timeToRead
+                    frontmatter {
+                      date
+                      category
+                      title
+                    }
+                  }
+                }
+              }
+            }`
+          }
+        ]
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
