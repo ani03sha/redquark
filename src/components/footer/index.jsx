@@ -12,6 +12,9 @@ export const Footer = () => (
     <a href="https://www.flaticon.com/" title="Flaticon">
       {' '}
       www.flaticon.com
+    </a> and Built with{' '}
+    <a href="https://github.com/JaeYeopHan/gatsby-starter-bee">
+      Gatsby-starter-bee
     </a>
   </footer>
 )
