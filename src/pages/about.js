@@ -7,6 +7,7 @@ import {
   rhythm
 } from '../utils/typography'
 import * as Lang from '../constants'
+import { Top } from '../components/top'
 
 export default ({
   data
@@ -21,23 +22,25 @@ export default ({
       node
     }) => node)[0]
 
-  return (<div style={
-    {
-      marginLeft: `auto`,
-      marginRight: `auto`,
-      maxWidth: rhythm(24),
-      padding: `${rhythm(0.5)} ${rhythm(3 / 4)} ${rhythm(1.5)} ${rhythm(
-        3 / 4
-      )}`,
-    }
-  } >
-    <
-      div dangerouslySetInnerHTML={
+  return (
+    <div><Top title="Red Quark" location="/about" rootPath="/" />
+      <div style={
         {
-          __html: resume.html
+          marginLeft: `auto`,
+          marginRight: `auto`,
+          maxWidth: rhythm(32),
+          padding: `${rhythm(0.5)} ${rhythm(3 / 4)} ${rhythm(1.5)} ${rhythm(
+            3 / 4
+          )}`,
         }
-      }
-    /> </div>
+      }>
+        <div dangerouslySetInnerHTML={
+          {
+            __html: resume.html
+          }
+        }
+        /></div>
+    </div>
   )
 }
 
