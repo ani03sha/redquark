@@ -4,7 +4,6 @@ import { GitHubIcon } from '../social-share/github-icon'
 
 import './index.scss'
 import { right } from 'inquirer/lib/utils/readline'
-import { AboutICon } from '../about-icon'
 
 export const Top = ({ title, location, rootPath }) => {
   const isRoot = location.pathname === rootPath
