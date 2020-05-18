@@ -10,7 +10,7 @@ module.exports = {
     medium: `@anirudh03sharma`,
     facebook: `Anir35`,
     linkedin: `anirshar`,
-    stackoverflow: `7920195/anirudh-sharma`,
+    stackoverflow: `users/7920195/anirudh-sharma`,
   },
   icon: `content/assets/rq.png`, // Add your favicon
   keywords: [`blog`],
