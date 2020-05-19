@@ -1,17 +1,12 @@
 import React from 'react'
-import {
-  graphql
-} from 'gatsby'
+import { graphql } from 'gatsby'
 
-import {
-  rhythm
-} from '../utils/typography'
+import { rhythm } from '../utils/typography'
 import * as Lang from '../constants'
 import { Top } from '../components/top'
+import { ThemeSwitch } from '../components/theme-switch'
 
-export default ({
-  data
-}) => {
+export default ({ data }) => {
   const resumes = data.allMarkdownRemark.edges
 
   const resume = resumes
@@ -23,12 +18,14 @@ export default ({
     }) => node)[0]
 
   return (
-    <div><Top title="Red Quark" location="/about" rootPath="/" />
+    <div>
+      <Top title="Red Quark" location="/about" rootPath="/" />
+      <ThemeSwitch />
       <div style={
         {
           marginLeft: `auto`,
           marginRight: `auto`,
-          maxWidth: rhythm(32),
+          maxWidth: rhythm(24),
           padding: `${rhythm(0.5)} ${rhythm(3 / 4)} ${rhythm(1.5)} ${rhythm(
             3 / 4
           )}`,

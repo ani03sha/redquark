@@ -6,7 +6,7 @@ lang: 'en'
 
 # [Anirudh Sharma](https://redquark.org)
 
-Hello, World! I am Anirudh and I am from India. I am a full stack software developer based out of Bengaluru, India.
+Hello, World! I am Anirudh and I am from India. I am a full stack software developer with a passion for learning technologies and automation. I enjoy good movies, cricket trivia and comic books.
 
 ## Projects
 
