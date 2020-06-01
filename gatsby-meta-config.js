@@ -2,7 +2,7 @@ module.exports = {
   title: `Red Quark`,
   description: `A technical blog`,
   author: `Anirudh Sharma`,
-  introduction: `Love to learn and share about technology`,
+  introduction: `I love to learn and share. Hence, this site has no ads, no affiliation links, or any BS. If you like what you see, give me a thumbs up.`,
   siteUrl: `https://redquark.org/`, // Your blog site url
   social: {
     twitter: `I_am_Anirudh`,
