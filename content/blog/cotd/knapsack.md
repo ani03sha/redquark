@@ -247,6 +247,6 @@ console.log("Maximum value: " + getMaximumValue(W, n, weights, values));
 
 So, in this post, we learned about yet another problem that sounds tricky but actually pretty simple. I hope you enjoyed this post.
 
-You can find the code on my [GitHub]() repository. If you like it, please share your thoughts in the comment.
+You can find the code on my [GitHub](https://github.com/ani03sha/ConceptOfTheDay) repository. If you like it, please share your thoughts in the comment.
 
 See ya 🙂.
