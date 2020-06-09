@@ -1,0 +1,37 @@
+---
+title: 'Day 00 - AEM Developer Series'
+date: 2020-6-07 19:17:00
+category: 'AEM'
+draft: false
+---
+
+Hello everyone :wave:! Welcome to this AEM development series. 
+
+These blog posts aim to explain the concepts and working of Adobe Experience Manager as a content management system (CMS). Great! but you may be asking why you should bother learning AEM in the first place? You're absolutely right. Before we take on something, we must ask ourselves why are we doing and what will we get from this? Having a clear goal in mind helps us maintain our focus and doesn't let our mind wander off.
+
+Let's start answering this question first.
+
+## What is AEM and why should we give a damn?
+
+We can all see the revolution of Digital Marketing today. Today if you ask any company what is more important thing for them than the digital presence of their company, their answer would most likely be - NOTHING!!!
+
+And we are not talking about only the big giants but small scale and medium scale organizations also. Everyone wants to be a part of this digital revolution.
+
+Legendary economist [Adam Smith](https://en.wikipedia.org/wiki/Adam_Smith) explained the concept of *Demand and Supply* in his epic work **The Wealth of Nations**. This explained that if there is a *demand*, it has to be met with the *supply*.
+
+Since companies wanted to have a digital marketing solutions, the leaders in the technology domain obliged. Companies/Communities started creating different digital marketing solutions. Adobe came up with one of the niche products in the market - **A**dobe **E**xperience **M**anager (AEM) and today they are the market leaders in Digital Marketing domain.
+
+## Why this developer series?
+
+Since AEM is in huge demand, people who know how to develop on AEM are also in huge demand. But developing on AEM is not easy because it is made up of various open-source technologies such as Apache Felix (OSGi), Apache Sling, Apache Oak and Adobe's own technologies like Granite, HTL etc. Learning all these technologies in conjunction can sometimes becomes confusing and frustrating 😫.
+
+When I first started learning AEM in 2016, I was dumbfounded to see there is so much going on under the hood. I then spent months to gather all the resources (mostly Adobe's official documentation) but it was so overwhelming (my personal experience 😕).
+
+Therefore, I decided to create a series which can help a newbie in AEM development to learn this amazing product. This series is my learning experience to get the knack of AEM Development. I have tried to put the posts in a logical order in which they should be learned.
+
+This tutorial is compatible with AEM 6.5 but it should work without issues on 6.3 and 6.4 as well. The only prerequisite for following this tutorial is the basic understanding of **Java** and **JavaScript**.
+
+So what are we waiting for? Let's dive in :sunglasses:.
+
+## Note :label:
+There is an older version of this tutorial here => [AEM Developer Series - Old](https://aem.redquark.org/). It is not outdated and works well with the latest versions of AEM.

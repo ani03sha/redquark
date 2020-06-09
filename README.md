@@ -4,4 +4,17 @@
 
 Personal website running on GatsbyJS, ReactJS and NodeJS.
 
+## Blogs
+- [concept Of The Day](#Concept-Of-The-Day)
+- [AEM](#AEM)
+
+## Concept Of The Day
+
+1. [Kadane Algorithm](https://redquark.org/cotd/kadane_algorithm/)
+2. [0/1 Knapsack Problem](https://redquark.org/cotd/knapsack/)
+3. [Sliding window Algorithm](https://redquark.org/cotd/sliding_window/)
+
+## AEM
+1. [Day 00 - AEM Developer Series](https://redquark.org/aem/day-00-aem-developer-series/)
+
 With ❤️ from [Gatsby Starter Bee](https://www.gatsbyjs.org/starters/JaeYeopHan/gatsby-starter-bee/) template.
