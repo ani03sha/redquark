@@ -5,7 +5,7 @@
 Personal website running on GatsbyJS, ReactJS and NodeJS.
 
 ## Blogs
-- [concept Of The Day](#Concept-Of-The-Day)
+- [Concept Of The Day](#Concept-Of-The-Day)
 - [AEM](#AEM)
 
 ## Concept Of The Day
@@ -16,5 +16,7 @@ Personal website running on GatsbyJS, ReactJS and NodeJS.
 
 ## AEM
 1. [Day 00 - AEM Developer Series](https://redquark.org/aem/day-00-aem-developer-series/)
+2. [Day 01 - Introduction to AEM](https://redquark.org/aem/day-01-introduction-to-aem/)
+3. [Day 02 - AEM Building Blocks](https://redquark.org/aem/day-02-aem-building-blocks/)
 
 With ❤️ from [Gatsby Starter Bee](https://www.gatsbyjs.org/starters/JaeYeopHan/gatsby-starter-bee/) template.

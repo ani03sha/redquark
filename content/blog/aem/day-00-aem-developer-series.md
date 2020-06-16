@@ -34,4 +34,11 @@ This tutorial is compatible with AEM 6.5 but it should work without issues on 6.
 So what are we waiting for? Let's dive in :sunglasses:.
 
 ## Note :label:
-There is an older version of this tutorial here => [AEM Developer Series - Old](https://aem.redquark.org/). It is not outdated and works well with the latest versions of AEM.
+There is an older version of this tutorial here => [AEM Developer Series](https://aem.redquark.org/). It is not outdated and works well with the latest versions of AEM.
+
+Happy learning and Namaste :pray:.
+
+## AEM Developer Series Index
+1. [Day 00 - AEM Developer Series](https://redquark.org/aem/day-00-aem-developer-series/)
+2. [Day 01 - Introduction To AEM](https://redquark.org/aem/day-01-introduction-to-aem/)
+3. [Day 02 - AEM Building Blocks](https://redquark.org/aem/day-02-aem-building-blocks/)

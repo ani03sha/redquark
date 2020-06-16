@@ -102,4 +102,4 @@ In this post, we discussed high-level details about the Adobe Experience Manager
 
 I would love to hear your thoughts on this post and would like to have suggestions from you to make this post better.
 
-Happy Learning 😊.
+Happy Learning 😊 and Namaste :pray:.
