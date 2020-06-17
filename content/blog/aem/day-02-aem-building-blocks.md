@@ -141,8 +141,6 @@ In this developer series, we will be doing the same - develop custom code on top
 ## Conclusion
 This is a long post and with a lot of theory :tired_face:. But this theory is needed to understand the concepts behind AEM. So, I hope you are still enthusiastic about AEM.
 
-From the next post onwards, we will develop application on AEM using their APIs while learning concepts.
-
 I would love to hear your thoughts on this post and would like to have suggestions from you to make this post better.
 
 Happy Learning 😊 and Namaste :pray:.

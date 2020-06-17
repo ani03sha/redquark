@@ -18,5 +18,6 @@ Personal website running on GatsbyJS, ReactJS and NodeJS.
 1. [Day 00 - AEM Developer Series](https://redquark.org/aem/day-00-aem-developer-series/)
 2. [Day 01 - Introduction to AEM](https://redquark.org/aem/day-01-introduction-to-aem/)
 3. [Day 02 - AEM Building Blocks](https://redquark.org/aem/day-02-aem-building-blocks/)
+4. [Day 04 - AEM Installation and Consoles](https://redquark.org/aem/day-03-aem-consoles/)
 
 With ❤️ from [Gatsby Starter Bee](https://www.gatsbyjs.org/starters/JaeYeopHan/gatsby-starter-bee/) template.
