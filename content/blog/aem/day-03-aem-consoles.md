@@ -72,7 +72,7 @@ This console will display all the assets in your organization. It lets you store
 
 ### Felix Console
 This console is the one where you can see all the OSGi bundles - out of the box as well as your custom ones. It has various other consoles which we will see gradually.
-<img src='../media/aem-assets-console.jpg' alt='AEM System Console' style="display: block; margin-left: auto; margin-right: auto;">
+<img src='../media/aem-system-console.jpg' alt='AEM System Console' style="display: block; margin-left: auto; margin-right: auto;">
 
 ### CRX/DE
 CRX DE stands for **Content Repository eXtreme Development Environment**. It is an implementation of JCR and here we can see the nodes and properties. We can also develop code here.
