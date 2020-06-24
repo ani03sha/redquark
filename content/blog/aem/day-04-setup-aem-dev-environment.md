@@ -342,7 +342,25 @@ Package installed in 22861ms.
 8. Now, navigate to [Apache Felix Console](http://localhost:4502/system/console/bundles) and you will see that your bundles are installed. Make sure they are in the "Active" state.
 <img src='../media/aem-project-bundle.jpg' alt='AEM Project Bundle' style="display: block; margin-left: auto; margin-right: auto;">
 
-If everything is correct up to this point, then you should pat yourself on the back :ok_hand:. You have setup your AEM development environment in local. Congratulations :clap:!
+## Sync AEM instance with IntelliJ
+
+When we will develop, there will be cases where we need to sync our AEM server with our developed code. One trivial way to do is run maven build and deploy the code which is a little cumbersome.
+
+Fortunately, we live in modern times where we have the liberty to use awesome plugins created by the software community. There is one such plugin called [IntelliVault](https://plugins.jetbrains.com/plugin/7328-intellivault) which takes all the burden of syncing AEM server with our developed code (This is not applicable for Java code, though :grimacing:).
+
+Below are the steps to leverage this plugin -
+
+1. Go to this [link](https://repo1.maven.org/maven2/org/apache/jackrabbit/vault/vault-cli/3.4.4/) and download the FileVault zip and extract it your favorite location.
+2. Now go to this [link](https://plugins.jetbrains.com/plugin/7328-intellivault) and download the IntelliVault.jar file
+3. Go to IntelliJ IDEA and File :arrow_right: Settings... :arrow_right: Plugins :arrow_right: Settings icon :arrow_right: Install Plugin from Disk... :arrow_right: Apply :arrow_right: OK.
+<img src='../media/aem-install-intellivault.jpg' alt='AEM Install IntelliVault' style="display: block; margin-left: auto; margin-right: auto;">
+4. Once done, restart the IDE.
+5. Go to File :arrow_right: Settings... :arrow_right: Tools :arrow_right: IntelliVault and configure as show in the below screenshot. "Vault Directory" is the path for zip file that you downloaded in step #1.
+<img src='../media/aem-vault-config.jpg' alt='AEM Vault Config' style="display: block; margin-left: auto; margin-right: auto;">
+6. Now, to test your installation, go to ```~/ui.apps/src/main/content/jcr_root/apps/aemtutorials/clientlibs``` :arrow_right: IntelliVault :arrow_right: Pull from CRX... and follow the instructions on the screen.
+<img src='../media/aem-vault-sync.jpg' alt='AEM Vault Sync' style="display: block; margin-left: auto; margin-right: auto;">
+
+If everything is working as expected up to this point, then you should pat yourself on the back :ok_hand:. You have setup your AEM development environment in local. Congratulations :clap:!
 
 ## Conclusion
 Phew! it was a long post :weary:. We battled our way to set up an AEM development environment in this post.

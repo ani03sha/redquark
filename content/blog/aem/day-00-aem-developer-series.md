@@ -42,4 +42,5 @@ Happy learning and Namaste :pray:.
 1. [Day 00 - AEM Developer Series](https://redquark.org/aem/day-00-aem-developer-series/)
 2. [Day 01 - Introduction To AEM](https://redquark.org/aem/day-01-introduction-to-aem/)
 3. [Day 02 - AEM Building Blocks](https://redquark.org/aem/day-02-aem-building-blocks/)
-4. [Day 04 - AEM Installation and Consoles](https://redquark.org/aem/day-03-aem-consoles/)
+4. [Day 03 - AEM Installation and Consoles](https://redquark.org/aem/day-03-aem-consoles/)
+5. [Day 04 - Setup AEM Development Environment](https://redquark.org/aem/day-04-setup-aem-dev-environment/)
