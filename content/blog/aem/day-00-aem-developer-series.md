@@ -45,3 +45,4 @@ Happy learning and Namaste :pray:.
 4. [Day 03 - AEM Installation and Consoles](https://redquark.org/aem/day-03-aem-consoles/)
 5. [Day 04 - Setup AEM Development Environment](https://redquark.org/aem/day-04-setup-aem-dev-environment/)
 6. [Day 05 - Develop AEM Components and Templates](https://redquark.org/aem/day-05-develop-components-templates/)
+7. [Day 06 - HTL and Clientlibs basics](https://redquark.org/aem/day-06-htl-clientlibs/)
