@@ -23,5 +23,6 @@ Personal website running on GatsbyJS, ReactJS and NodeJS.
 6. [Day 05 - Develop AEM Components and Templates](https://redquark.org/aem/day-05-develop-components-templates/)
 7. [Day 06 - HTL and Clientlibs basics](https://redquark.org/aem/day-06-htl-clientlibs/)
 8. [Day 07 - Sling Models](https://redquark.org/aem/day-07-sling-models)
+9. [Day 09 - OSGi Components and Services](https://redquark.org/aem/day-08-osgi-components-services)
 
 With ❤️ from [Gatsby Starter Bee](https://www.gatsbyjs.org/starters/JaeYeopHan/gatsby-starter-bee/) template.
