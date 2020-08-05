@@ -50,3 +50,4 @@ Happy learning and Namaste :pray:.
 9. [Day 08 - OSGi Components and Services](https://redquark.org/aem/day-08-osgi-components-services)
 10. [Day 09 - Sling Servlets Part 1](https://redquark.org/aem/day-09-sling-servlets-1)
 11. [Day 10 - Sling Servlets Part 2](https://redquark.org/aem/day-10-sling-servlets-2)
+12. [Day 11 - Custom OSGi Configuration](https://redquark.org/aem/custom-osgi-configuration)
