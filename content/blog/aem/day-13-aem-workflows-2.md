@@ -1,6 +1,6 @@
 ---
 title: 'Day 13 - AEM Workflows (Part II)'
-date: 2020-8-10 16:23:00
+date: 2020-8-16 16:23:00
 category: 'AEM'
 draft: false
 ---
