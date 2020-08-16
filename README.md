@@ -28,5 +28,6 @@ Personal website running on GatsbyJS, ReactJS and NodeJS.
 11. [Day 10 - Sling Servlets Part 2](https://redquark.org/aem/day-10-sling-servlets-2)
 12. [Day 11 - Custom OSGi Configuration](https://redquark.org/aem/custom-osgi-configuration)
 13. [Day 12 - AEM Workflows Part I](https://redquark.org/aem/day-12-aem-workflows-1)
+14. [Day 13 - AEM Workflows Part II](https://redquark.org/aem/day-13-aem-workflows-2)
 
 With ❤️ from [Gatsby Starter Bee](https://www.gatsbyjs.org/starters/JaeYeopHan/gatsby-starter-bee/) template.

@@ -1,5 +1,5 @@
 ---
-title: 'Day 12 - AEM Workflows Part I'
+title: 'Day 12 - AEM Workflows (Part I)'
 date: 2020-8-10 16:23:00
 category: 'AEM'
 draft: false
