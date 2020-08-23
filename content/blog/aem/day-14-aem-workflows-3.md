@@ -34,7 +34,7 @@ import com.adobe.granite.workflow.exec.WorkflowProcess;
 import com.adobe.granite.workflow.metadata.MetaDataMap;
 import com.day.cq.wcm.api.Page;
 import com.day.cq.wcm.api.PageManager;
-import jdk.nashorn.internal.ir.annotations.Reference;
+import org.osgi.service.component.annotations.Reference;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
 import org.osgi.service.component.annotations.Component;
