@@ -53,4 +53,5 @@ Happy learning and Namaste :pray:.
 11. [Day 11 - Custom OSGi Configuration](https://redquark.org/aem/custom-osgi-configuration)
 12. [Day 12 - AEM Workflows Part I](https://redquark.org/aem/day-12-aem-workflows-1)
 13. [Day 13 - AEM Workflows Part II](https://redquark.org/aem/day-13-aem-workflows-2)
-14. [Day 14 - AEM Workflows Part III](https://redquark.org/aem/day-13-aem-workflows-3)
+14. [Day 14 - AEM Workflows Part III](https://redquark.org/aem/day-14-aem-workflows-3)
+15. [Day 15 - Eventing In AEM](https://redquark.org/aem/day-15-eventing-in-aem)
