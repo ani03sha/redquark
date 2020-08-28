@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Switch from 'react-switch'
-
+import * as Storage from '../../utils/storage'
 import * as Dom from '../../utils/dom'
 import { THEME } from '../../constants'
 
@@ -56,14 +56,13 @@ export const ThemeSwitch = () => {
 
   const handleChange = checked => {
     const theme = getTheme(checked)
-
+    Storage.setTheme(checked)
     setChecked(checked)
     toggleTheme(theme)
   }
 
   useEffect(() => {
-    const checked = Dom.hasClassOfBody(THEME.DARK)
-
+    const checked = Storage.getTheme(Dom.hasClassOfBody(THEME.DARK))
     handleChange(checked)
   }, [])
 

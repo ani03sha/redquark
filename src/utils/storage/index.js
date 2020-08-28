@@ -38,3 +38,11 @@ export function getData() {
 export function setData(val) {
   return setValueToLocalStorage(LOCAL_STORAGE_KEY, val)
 }
+
+export function getTheme(defaultValue) {
+  return getValueFromLocalStorage(`${LOCAL_STORAGE_KEY}/theme`) || defaultValue
+}
+
+export function setTheme(val) {
+  return setValueToLocalStorage(`${LOCAL_STORAGE_KEY}/theme`, val)
+}
