@@ -30,5 +30,6 @@ Personal website running on GatsbyJS, ReactJS and NodeJS.
 13. [Day 13 - AEM Workflows Part II](https://redquark.org/aem/day-13-aem-workflows-2)
 14. [Day 14 - AEM Workflows Part III](https://redquark.org/aem/day-14-aem-workflows-3)
 15. [Day 15 - Eventing In AEM](https://redquark.org/aem/day-15-eventing-in-aem)
+16. [Day 16 - Schedulers In AEM](https://redquark.org/aem/day-16-schedulers-in-aem)
 
 With ❤️ from [Gatsby Starter Bee](https://www.gatsbyjs.org/starters/JaeYeopHan/gatsby-starter-bee/) template.
