@@ -23,13 +23,14 @@ Personal website running on GatsbyJS, ReactJS and NodeJS.
 6. [Day 06 - HTL and Clientlibs basics](https://redquark.org/aem/day-06-htl-clientlibs/)
 7. [Day 07 - Sling Models](https://redquark.org/aem/day-07-sling-models)
 8. [Day 08 - OSGi Components and Services](https://redquark.org/aem/day-08-osgi-components-services)
-9. [Day 09 - Sling Servlets Part 1](https://redquark.org/aem/day-09-sling-servlets-1)
-10. [Day 10 - Sling Servlets Part 2](https://redquark.org/aem/day-10-sling-servlets-2)
+9. [Day 09 - Sling Servlets Part I](https://redquark.org/aem/day-09-sling-servlets-1)
+10. [Day 10 - Sling Servlets Part II](https://redquark.org/aem/day-10-sling-servlets-2)
 11. [Day 11 - Custom OSGi Configuration](https://redquark.org/aem/custom-osgi-configuration)
 12. [Day 12 - AEM Workflows Part I](https://redquark.org/aem/day-12-aem-workflows-1)
 13. [Day 13 - AEM Workflows Part II](https://redquark.org/aem/day-13-aem-workflows-2)
 14. [Day 14 - AEM Workflows Part III](https://redquark.org/aem/day-14-aem-workflows-3)
 15. [Day 15 - Eventing In AEM](https://redquark.org/aem/day-15-eventing-in-aem)
 16. [Day 16 - Schedulers In AEM](https://redquark.org/aem/day-16-schedulers-in-aem)
+17. [Day 17 - Granite Datasources (Dynamic Dropdown)](https://redquark.org/aem/day-17-granite-datasources)
 
 With ❤️ from [Gatsby Starter Bee](https://www.gatsbyjs.org/starters/JaeYeopHan/gatsby-starter-bee/) template.
