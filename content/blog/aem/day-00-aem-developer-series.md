@@ -57,3 +57,4 @@ Happy learning and Namaste :pray:.
 15. [Day 15 - Eventing In AEM](https://redquark.org/aem/day-15-eventing-in-aem)
 16. [Day 16 - Schedulers In AEM](https://redquark.org/aem/day-16-schedulers-in-aem)
 17. [Day 17 - Granite Datasources (Dynamic Dropdown)](https://redquark.org/aem/day-17-granite-datasources)
+18. [Day 18 - Sling Jobs](https://redquark.org/aem/day-18-sling-jobs)
