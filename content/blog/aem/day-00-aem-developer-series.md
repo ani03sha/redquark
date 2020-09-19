@@ -59,3 +59,4 @@ Happy learning and Namaste :pray:.
 17. [Day 17 - Granite Datasources (Dynamic Dropdown)](https://redquark.org/aem/day-17-granite-datasources)
 18. [Day 18 - Sling Jobs](https://redquark.org/aem/day-18-sling-jobs)
 19. [Day 19 - Queries In AEM Part I](https://redquark.org/aem/day-19-queries-in-aem-1)
+20. [Day 20 - Queries In AEM Part II](https://redquark.org/aem/day-20-queries-in-aem-2)
