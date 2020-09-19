@@ -61,19 +61,19 @@ local_maximum = -2
 global_maximum = -2
 
 i = 1: 
-local_maximum = max(2, -2) = 2
+local_maximum = max(2, -2 + 2) = 2
 global_maximum = 2
 
 i = 2: 
-local_maximum = max(5, 2+5) = 7
+local_maximum = max(5, 2 + 5) = 7
 global_maximum = 7
 
 i = 3: 
-local_maximum = max(7, -11 + 7) = 7
+local_maximum = max(-11, -11 + 7) = -4
 global_maximum = 7
 
 i = 4: 
-local_maximum = max(6, 7) = 7
+local_maximum = max(6, -4 + 6) = 7
 global_maximum = 7
 
 return 7
