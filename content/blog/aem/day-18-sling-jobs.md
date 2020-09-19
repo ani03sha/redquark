@@ -363,7 +363,7 @@ public final class AppConstants {
 
 ## Conclusion
 
-And that's a wrap :raising_hand_man:. We have successfully create a sling job and replicated content through it. I hope you enjoyed this post.
+And that's a wrap!!!. We have successfully created a sling job and replicated content through it. I hope you enjoyed this post.
 
 I would love to hear your thoughts on this and would like to have suggestions from you to make it better.
 
