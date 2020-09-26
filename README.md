@@ -4,14 +4,18 @@
 
 Personal website running on GatsbyJS, ReactJS and NodeJS.
 
-## Blogs
+## Categories
 - [Concept Of The Day](#Concept-Of-The-Day)
+- [LeetCode](#LeetCode)
 - [AEM](#AEM)
 
 ### Concept Of The Day
 1. [Kadane Algorithm](https://redquark.org/cotd/kadane_algorithm/)
 2. [0/1 Knapsack Problem](https://redquark.org/cotd/knapsack/)
 3. [Sliding window Algorithm](https://redquark.org/cotd/sliding_window/)
+
+### LeetCode
+1. [Two Sum](https://redquark.org/leetcode/0001-two-sum/)
 
 ### AEM
 0. [Day 00 - AEM Developer Series](https://redquark.org/aem/day-00-aem-developer-series/)

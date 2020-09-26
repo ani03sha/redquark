@@ -73,7 +73,7 @@ local_maximum = max(-11, -11 + 7) = -4
 global_maximum = 7
 
 i = 4: 
-local_maximum = max(6, -4 + 6) = 7
+local_maximum = max(6, -4 + 6) = 6
 global_maximum = 7
 
 return 7
@@ -90,7 +90,7 @@ Enough theory, let's get our hands dirty with some code.
 public class KadaneAlgorithm {
 
     private static int maximumSum(int[] a) {
-        if (a == null) {
+        if (a == null || a.length == 0) {
             return 0;
         }
         int globalMaximum = a[0];
@@ -123,7 +123,7 @@ public class KadaneAlgorithm {
 ### Python
 ```python
 def maximum_sum(a):
-    if a is None:
+    if a is None or len(a) == 0:
         return 0
     global_maximum = a[0]
     local_maximum = a[0]
@@ -149,10 +149,13 @@ print(maximum_sum(a))
 ```
 
 ### Kotlin
-```kotlin
+```java
 import kotlin.math.max
 
 fun maximumSum(a: IntArray): Int {
+    if (a.isEmpty()) {
+        return 0
+    }
     var globalMaximum = a[0]
     var localMaximum = a[0]
     for (i in 1 until a.size) {
@@ -182,6 +185,9 @@ fun main() {
 ### JavaScript
 ```javascript
 function maximum_sum(a) {
+    if (!a || a.length == 0) {
+        return 0;
+    }
     let localMaximum = a[0];
     let globalMaximum = a[0];
     for(let i = 0; i < a.length; i++) {
