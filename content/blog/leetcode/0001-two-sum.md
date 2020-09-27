@@ -50,7 +50,7 @@ After we have analyzed our problem, now it's time to think about the solution.
 The first solution that comes to mind is - 
 
 - Take one element
-- Add this element for every other element
+- Add this element with every other element
 - After adding, compare the sum with the given target
 - If the sum is equal to the target, return the indices of these two elements
 - If the sum is not equal to the target, we check for the next pair
@@ -237,8 +237,12 @@ fun twoSum(nums: IntArray, target: Int): IntArray {
 
 I hope you liked this post. Here, we solved the very first problem on LeetCode in ***O(n)*** time and ***O(n)*** space.
 
-I hope you liked this post. You can find the complete source code on [GitHub](https://github.com/ani03sha/RedQuarkTutorials/tree/master/LeetCode). 
+You can find the complete source code on [GitHub](https://github.com/ani03sha/RedQuarkTutorials/tree/master/LeetCode). If you find it useful, consider giving it a star :star:.
 
+- [Java](https://github.com/ani03sha/RedQuarkTutorials/blob/master/LeetCode/Java/src/main/java/org/redquark/tutorials/leetcode/TwoSum.java)
+- [Python](https://github.com/ani03sha/RedQuarkTutorials/blob/master/LeetCode/Python/src/Two_Sum.py)
+- [JavaScript](https://github.com/ani03sha/RedQuarkTutorials/blob/master/LeetCode/JavaScript/src/two_sum.js)
+- [Kotlin](https://github.com/ani03sha/RedQuarkTutorials/blob/master/LeetCode/Kotlin/src/main/kotlin/org/redquark/tutorials/leetcode/TwoSum.kt)
 Feel free to share your thoughts about this post in comments' section. I'd love to hear your feedback.
 
 Happy coding :smile: and Namaste :pray:!
