@@ -43,4 +43,7 @@ Personal website running on GatsbyJS, ReactJS and NodeJS.
 19. [Day 19 - Queries In AEM Part I](https://redquark.org/aem/day-19-queries-in-aem-1)
 20. [Day 20 - Queries In AEM Part II](https://redquark.org/aem/day-20-queries-in-aem-2)
 
+## Snippets
+1. [JavaScript Snippets - Part I](https://redquark.org/snippets/javascript-snippets-1/).
+
 With ❤️ from [Gatsby Starter Bee](https://www.gatsbyjs.org/starters/JaeYeopHan/gatsby-starter-bee/) template.
