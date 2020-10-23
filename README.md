@@ -1,6 +1,6 @@
 # Red Quark
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/fd10ca55-5fb6-4a73-aa08-4fe8477bba9a/deploy-status)](https://app.netlify.com/sites/redquark/deploys)
+[![License](https://img.shields.io/github/license/ani03sha/RedQuarkTutorials)](LICENSE.md)  ![Language](https://img.shields.io/badge/language-Java%20%2F%20Python%20%2F%20JavaScript%20%2F%20Kotlin-blue.svg)   [![Netlify Status](https://api.netlify.com/api/v1/badges/fd10ca55-5fb6-4a73-aa08-4fe8477bba9a/deploy-status)](https://app.netlify.com/sites/redquark/deploys)
 
 Personal website running on GatsbyJS, ReactJS and NodeJS.
 
