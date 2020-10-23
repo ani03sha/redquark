@@ -18,7 +18,9 @@ Personal website running on GatsbyJS, ReactJS and NodeJS.
 1. [Two Sum](https://redquark.org/leetcode/0001-two-sum/)
 2. [Add Two Numbers](https://redquark.org/leetcode/0002-add-two-numbers)
 3. [Longest Substring Without Repeating Characters](https://redquark.org/leetcode/0003-longest-substring-without-repeating-characters)
-4. [Median Of Two Sorted Arrays](https://redquark.org/leetcode/004-median-of-two-sorted-arrays)
+4. [Median Of Two Sorted Arrays](https://redquark.org/leetcode/0004-median-of-two-sorted-arrays)
+5. [Longest Palindromic Substring](https://redquark.org/leetcode/0005-longest-palindromic-substring)
+6. [ZigZag Conversion](https://redquark.org/leetcode/0006-zigzag-conversion)
 
 ### AEM
 0. [Day 00 - AEM Developer Series](https://redquark.org/aem/day-00-aem-developer-series/)
