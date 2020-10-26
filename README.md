@@ -21,6 +21,7 @@ Personal website running on GatsbyJS, ReactJS and NodeJS.
 4. [Median Of Two Sorted Arrays](https://redquark.org/leetcode/0004-median-of-two-sorted-arrays)
 5. [Longest Palindromic Substring](https://redquark.org/leetcode/0005-longest-palindromic-substring)
 6. [ZigZag Conversion](https://redquark.org/leetcode/0006-zigzag-conversion)
+7. [Reverse Integer](https://redquark.org/leetcode/0007-reverse-integer)
 
 ### AEM
 0. [Day 00 - AEM Developer Series](https://redquark.org/aem/day-00-aem-developer-series/)
