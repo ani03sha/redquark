@@ -8,6 +8,7 @@ Personal website running on GatsbyJS, ReactJS and NodeJS.
 - [Concept Of The Day](#Concept-Of-The-Day)
 - [LeetCode](#LeetCode)
 - [AEM](#AEM)
+- [Snippets](#Snippets)
 
 ### Concept Of The Day
 1. [Kadane Algorithm](https://redquark.org/cotd/kadane_algorithm/)

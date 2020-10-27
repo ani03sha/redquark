@@ -15,6 +15,7 @@ Therefore, the idea behind writing this post is to document some of the commonly
 ## Index
 1. [Run Cron Job](#1-run-cron-job)
 2. [Read From File](#2-read-from-file)
+3. [Write To File](#3-write-to-file)
 
 ## 1. Run Cron Job
 There's a nice NPM module **[node-cron](https://www.npmjs.com/package/node-cron)** that lets us implement a cron Job very easily.
@@ -105,6 +106,41 @@ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseru
 ```
 
 If we wish to read the file synchronously then we can use the function `readFileSync` instead of `readFile`.
+
+## 3. Write To File
+
+Like reading from file, a common use case is to write into file. We can leverage the core **File System (fs)** Node JS module.
+
+1. Since it is a core module, we don't have to install it explicitly.
+
+2. Include the following code in your application - 
+
+```javascript
+// Import the core node js fs module
+const fs = require('fs');
+// The content to be written into the file
+const contentToWrite = 'This content will be written into the file';
+
+const writeFile = () => {
+    fs.writeFile('files/sample-file-to-write.txt', contentToWrite, (err) => {
+        if (err) {
+            throw err;
+        }
+        console.log('File is saved!');
+    });
+}
+
+module.exports = { writeFile };
+```
+
+3. If everything goes well, then the output will be - 
+
+```
+File is saved!
+```
+
+Here we are writing the file asynchronously. To write into a file in synchronous fashion we can use `writeFileSync` function instead of `writeFile`.
+
 
 ## Conclusion
 
