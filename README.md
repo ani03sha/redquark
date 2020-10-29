@@ -24,6 +24,7 @@ Personal website running on GatsbyJS, ReactJS and NodeJS.
 6. [ZigZag Conversion](https://redquark.org/leetcode/0006-zigzag-conversion)
 7. [Reverse Integer](https://redquark.org/leetcode/0007-reverse-integer)
 8. [String To Integer (atoi)](https://redquark.org/leetcode/0008-string-to-integer-atoi)
+9. [Palindrome Number](https://redquark.org/leetcode/0009-palindrome-number)
 
 ### AEM
 0. [Day 00 - AEM Developer Series](https://redquark.org/aem/day-00-aem-developer-series/)
