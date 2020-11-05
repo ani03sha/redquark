@@ -126,6 +126,13 @@ It is now evident that we can use good old **Dynamic Programming** to solve this
 <br />
 :bulb: Try to evaluate the table by yourself to make it more clear.<br />
 
+### Time Complexity
+Since we are dealing with each character of both `s` and `p` the time complexity will be ***O(m × n)***
+where `m` and `n` are the lengths of `s` and `p` respectively.
+
+### Space Complexity
+We need a DP array for our intermediate operations of dimensions `m × n`, hence the space complexity will also be ***O(m × n)***.
+
 <br />
 Let's look at the code now :arrow_down:.
 
