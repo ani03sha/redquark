@@ -105,10 +105,10 @@ Let's understand this with an example `num = 2467`.
 If we get the corresponding values from the arrays, then we will get `M[2]`, `C[4]`, `X[6]` and `I[7]`. The output will be — ***MMCDLXVII***.
 
 ### Time Complexity
-We are scanning each digit of the number one by one therefore, the time complexity will be ***O(log<sub>10</sub>n)***.
+We are scanning each digit of the number one by one therefore, the time complexity will be ***O(log<sub>10</sub>n)***. But n cannot be grater than 3999, therefore, the maximum time can be ***O(loh<sub>10</sub>3999)*** ~= ***O(3.60)*** which is constant hence the overall time complexity will be ***O(1)***.
 
 ### Space Complexity
-We are using four arrays whose sizes don't depend on the input size hence the space complexity will be ***O(n)***.
+We are using four arrays whose sizes don't depend on the input size hence the space complexity will be ***O(1)***.
 
 ## Code
 
