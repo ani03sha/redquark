@@ -29,7 +29,8 @@ Personal website running on GatsbyJS, ReactJS and NodeJS.
 11. [Container With Most Water](https://redquark.org/leetcode/0011-container-with-most-water)
 12. [Integer To Roman](https://redquark.org/leetcode/0012-integer-to-roman)
 13. [Roman To Integer](https://redquark.org/leetcode/0013-roman-to-integer)
-14. [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/submissions/)
+14. [Longest Common Prefix](https://leetcode.com/leetcode/0014-longest-common-prefix)
+15. [3 Sum](https://leetcode.com/leetcode/0015-3-sum)
 
 ### AEM
 0. [Day 00 - AEM Developer Series](https://redquark.org/aem/day-00-aem-developer-series/)
