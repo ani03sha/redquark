@@ -42,7 +42,7 @@ The approach is similar to the one we discussed earlier -
 6. Compare the minimum difference between the current sum and the previous sum. The sum which give minimum difference is the answer.
 
 ### Time Complexity
-We are scanning the entire array keeping one element fixed. We are doing this for every element in the array. Thus, we are scanning each element of array `n` number of times. And we are doing this for `n` times, hence the worst case time complexity will be ***O(n<sup>2</sup> + n * log n)*** which comes down to ***O(sup>2</sup>)***.
+We are scanning the entire array keeping one element fixed. We are doing this for every element in the array. Thus, we are scanning each element of array `n` number of times. And we are doing this for `n` times, hence the worst case time complexity will be ***O(n<sup>2</sup> + n * log n)*** which comes down to ***O(n<sup>2</sup>)***.
 
 ### Space Complexity
 We are not using any data structure for the intermediate computations, hence the space complexity is ***O(1)***.
