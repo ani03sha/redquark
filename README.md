@@ -31,7 +31,9 @@ Personal website running on GatsbyJS, ReactJS and NodeJS.
 13. [Roman To Integer](https://redquark.org/leetcode/0013-roman-to-integer)
 14. [Longest Common Prefix](https://redquark.org/leetcode/0014-longest-common-prefix)
 15. [3 Sum](https://redquark.org/leetcode/0015-3-sum)
-16. [3 Sum Closest](https://redquark.org/leetcode/3-sum-closest)
+16. [3 Sum Closest](https://redquark.org/leetcode/0016-3-sum-closest)
+17. [Letter Combinations Of A Phone Number](https://redquark.org/leetcode/0017-letter-combinations)
+18. [4 Sum](https://redquark.org/leetcode/0018-4-sum)
 
 ### AEM
 0. [Day 00 - AEM Developer Series](https://redquark.org/aem/day-00-aem-developer-series/)
