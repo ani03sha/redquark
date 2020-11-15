@@ -95,7 +95,7 @@ We are not using any data structure for intermediate calculation, hence the spac
 ```java
 public class RemoveNthNodeFromEndOfList {
 
-    private static ListNode removeNthFromEnd(ListNode head, int n) {
+    public ListNode removeNthFromEnd(ListNode head, int n) {
         // Two pointers - fast and slow
         ListNode slow = head;
         ListNode fast = head;
