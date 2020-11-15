@@ -34,6 +34,8 @@ Personal website running on GatsbyJS, ReactJS and NodeJS.
 16. [3 Sum Closest](https://redquark.org/leetcode/0016-3-sum-closest)
 17. [Letter Combinations Of A Phone Number](https://redquark.org/leetcode/0017-letter-combinations)
 18. [4 Sum](https://redquark.org/leetcode/0018-4-sum)
+19. [Remove Nth Node From End Of List](https://redquark.org/leetcode/0019-remove-nth-node)
+20. [Valid Parentheses](https://redquark.org/leetcode/0020-valid-parentheses)
 
 ### AEM
 0. [Day 00 - AEM Developer Series](https://redquark.org/aem/day-00-aem-developer-series/)
