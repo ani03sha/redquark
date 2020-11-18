@@ -1,6 +1,6 @@
 ---
 title: 'JavaScript Snippets (Part I)'
-date: 2020-10-16 19:45:00
+date: 2020-11-18 20:17:00
 category: 'Snippets'
 draft: false
 ---
@@ -16,6 +16,7 @@ Therefore, the idea behind writing this post is to document some of the commonly
 1. [Run Cron Job](#1-run-cron-job)
 2. [Read From File](#2-read-from-file)
 3. [Write To File](#3-write-to-file)
+4. [Delete File](#4-delete-file)
 
 ## 1. Run Cron Job
 There's a nice NPM module **[node-cron](https://www.npmjs.com/package/node-cron)** that lets us implement a cron Job very easily.
@@ -141,6 +142,33 @@ File is saved!
 
 Here we are writing the file asynchronously. To write into a file in synchronous fashion we can use `writeFileSync` function instead of `writeFile`.
 
+## 4. Delete File
+So far we have seen reading to the file and writing to the file. Sometimes we need to delete a file. The core module of Node JS also allows us to do both synchronously and asynchronously.
+
+1. Since it is a core module, we don't have to install it explicitly.
+
+2. Include the following code in your application - 
+
+```javascript
+// Import the core node js fs module
+const fs = require('fs');
+// Relative path of the file to be deleted
+const fileName = 'files/sample-file-to-write.txt';
+
+// This function deletes the file
+const deleteFile = () => {
+    fs.unlink(fileName, (err) => {
+        if (err) {
+            throw err;
+        }
+        console.log("File deleted successfully");
+    });
+}
+
+module.exports = { deleteFile };
+```
+
+This will delete the file from the mentioned path. If we wish to use the file synchronously, then we can use `fs.unlinkSync` instead of `fs.unlink`.
 
 ## Conclusion
 
