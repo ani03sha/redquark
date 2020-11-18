@@ -36,6 +36,7 @@ Personal website running on GatsbyJS, ReactJS and NodeJS.
 18. [4 Sum](https://redquark.org/leetcode/0018-4-sum)
 19. [Remove Nth Node From End Of List](https://redquark.org/leetcode/0019-remove-nth-node)
 20. [Valid Parentheses](https://redquark.org/leetcode/0020-valid-parentheses)
+21. [Merge Two Sorted Lists](https://redquark.org/leetcode/0021-merge-two-sorted-lists)
 
 ### AEM
 0. [Day 00 - AEM Developer Series](https://redquark.org/aem/day-00-aem-developer-series/)
