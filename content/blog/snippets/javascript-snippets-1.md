@@ -1,6 +1,6 @@
 ---
 title: 'JavaScript Snippets (Part I)'
-date: 2020-11-18 20:17:00
+date: 2020-11-20 19:13:00
 category: 'Snippets'
 draft: false
 ---
@@ -17,6 +17,7 @@ Therefore, the idea behind writing this post is to document some of the commonly
 2. [Read From File](#2-read-from-file)
 3. [Write To File](#3-write-to-file)
 4. [Delete File](#4-delete-file)
+5. [Send Email](#5-send-email)
 
 ## 1. Run Cron Job
 There's a nice NPM module **[node-cron](https://www.npmjs.com/package/node-cron)** that lets us implement a cron Job very easily.
@@ -169,6 +170,64 @@ module.exports = { deleteFile };
 ```
 
 This will delete the file from the mentioned path. If we wish to use the file synchronously, then we can use `fs.unlinkSync` instead of `fs.unlink`.
+
+## 5. Send Email
+We can easily send emails via the ***[nodemailer](https://www.npmjs.com/package/nodemailer)*** module in Node JS. Below are the steps -
+
+1. Install ***nodemailer*** module in your project using the following command - 
+```
+npm install nodemailer
+```
+
+2. Now create a new file `sendEmail.js` and paste the following code in it.
+
+```javascript
+const nodemailer = require('nodemailer');
+
+const toEmail = '<recipient-email-id>';
+const fromEmail = '<sender-email-id>';
+const subject = '<subject-of-the-email>';
+const message = '<message-of-the-email>';
+
+const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: '<your-email-id>',
+        pass: '<your-password>'
+    }
+});
+
+const sendEmail = () => {
+    const details = {
+        from: fromEmail,
+        to: toEmail,
+        subject: subject,
+        html: message
+    };
+
+    transporter.sendMail(details, (error, data) => {
+        if (error) {
+            console.log(error);
+        } else {
+            console.log(data);
+        }
+    });
+};
+
+module.exports = {
+    sendEmail
+};
+```
+
+3. First, we are importing the `nodemailer` module in our code. 
+
+4. To send the email, we need to have `transport` object which will authenticate the sender. Here, you need to pass valid email address and password and the email client (`GMail` in our case).
+
+5. Then we need to have some constants like sender's and recipient's email address, subject and message of the email.
+
+6. At last, we will call `transporter.sendEmail` function to send and email.
+
+> **NOTE:** You need to allow 'less secure apps' in GMail using the steps mentioned [here](https://hotter.io/docs/email-accounts/secure-app-gmail/).
 
 ## Conclusion
 
