@@ -5,10 +5,15 @@
 Personal website running on GatsbyJS, ReactJS and NodeJS.
 
 ## Categories
+- [Data Structures & Algorithms](#Data-Structures-&-Algorithms)
 - [Concept Of The Day](#Concept-Of-The-Day)
 - [LeetCode](#LeetCode)
 - [AEM](#AEM)
 - [Snippets](#Snippets)
+
+### Data Structures & Algorithms
+1. [Introduction To Data Structures & Algorithms](https://redquark.org/dsa/introduction/)
+2. [Analysis Of Algorithms](https://redquark.org/dsa/analysis-of-algorithms/)
 
 ### Concept Of The Day
 1. [Kadane Algorithm](https://redquark.org/cotd/kadane_algorithm/)

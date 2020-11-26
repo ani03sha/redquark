@@ -1,0 +1,7 @@
+{"rule":"IT_IS","sentence":"^\\QSecondly, we will take the first string and match its each character one by one with all the other strings.\\E$"}
+{"rule":"DO_HE_VERB","sentence":"^\\QBut can we do it just like that?\\E$"}
+{"rule":"ENGLISH_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QThen he divided the sum by 2\\E$"}
+{"rule":"EN_UNPAIRED_BRACKETS","sentence":"^\\QImagine there are two bikers both riding Lightning LS-218 at top speed (which is 351 km/h :astonished:) but from different points A and B 100 km apart.\\E$"}
+{"rule":"THE_PUNCT","sentence":"^\\QLet's say we are given an array having n integers A = a1, a2, a3, ... , an, and we need to find the maximum element among them.\\E$"}
+{"rule":"THE_PUNCT","sentence":"^\\QLet's say we are given an array having n integers A = a1, a2, a3, ..., an, and we need to find the maximum element among them.\\E$"}
+{"rule":"ENGLISH_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QLine #5 will be executed only once.\\E$"}
