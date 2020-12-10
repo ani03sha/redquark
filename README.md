@@ -44,7 +44,8 @@ Personal website running on GatsbyJS, ReactJS and NodeJS.
 21. [Merge Two Sorted Lists](https://redquark.org/leetcode/0021-merge-two-sorted-lists)
 22. [Generate Parentheses](https://redquark.org/leetcode/0022-generate-parentheses)
 23. [Merge K Sorted Lists](https://redquark.org/leetcode/0023-merge-k-sorted-lists)
-23. [Swap Nodes In Pairs](https://redquark.org/leetcode/0024-swap-nodes-in-pairs)
+24. [Swap Nodes In Pairs](https://redquark.org/leetcode/0024-swap-nodes-in-pairs)
+25. [Reverse Nodes In K Group](https://redquark.org/leetocde/0025-reverse-nodes-in-k-group)
 
 ### AEM
 0. [Day 00 — AEM Developer Series](https://redquark.org/aem/day-00-aem-developer-series/)
