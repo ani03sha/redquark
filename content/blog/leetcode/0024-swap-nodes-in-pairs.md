@@ -26,7 +26,7 @@ Output: [2,1,4,3]
 
 <br />
 
-<img src='../media/leetcode-19-list-1.jpg' alt='LeetCode 24 List 1 (courtesy: LeetCode)' style="display: block; margin-left: auto; margin-right: auto; border: 5px solid black;">
+<img src='../media/leetcode-24-list-1.jpg' alt='LeetCode 24 List 1 (courtesy: LeetCode)' style="display: block; margin-left: auto; margin-right: auto; border: 5px solid black;">
 
 <br />
 
