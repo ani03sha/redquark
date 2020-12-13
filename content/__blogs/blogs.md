@@ -5,11 +5,11 @@ lang: 'en'
 ---
 
 ## Categories
-- [Data Structures & Algorithms](#Data-Structures-&-Algorithms)
-- [Concept Of The Day](#Concept-Of-The-Day)
-- [LeetCode](#LeetCode)
-- [AEM](#AEM)
-- [Snippets](#Snippets)
+- [Data Structures & Algorithms](#data-structures--algorithms)
+- [Concept Of The Day](#concept-of-the-day)
+- [LeetCode](#leetcode)
+- [AEM](#aem)
+- [Snippets](#snippets)
 
 ### Data Structures & Algorithms
 1. [Introduction To Data Structures & Algorithms](https://redquark.org/dsa/introduction/)
