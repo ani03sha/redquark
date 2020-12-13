@@ -11,7 +11,17 @@ export const Top = ({ title, location, rootPath }) => {
     <div className="top">
       {(
         <Link to={`/`} className="link">
-          {title}
+          Home
+        </Link>
+      )}
+      {(
+        <Link to={`/about`} className="link">
+          About
+        </Link>
+      )}
+      {(
+        <Link to={`/blogs`} className="link">
+          Blogs
         </Link>
       )}
       <GitHubIcon />
