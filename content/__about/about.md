@@ -1,16 +1,16 @@
 ---
 title: 'about'
-date: 2019-1-27 16:21:13
+date: 2020-12-13 13:05:00
 lang: 'en'
 ---
 
 # [Anirudh Sharma](https://redquark.org)
 
-Hello, World! I am Anirudh and I am from India. I am a full stack software developer with a passion for learning technologies and automation. I enjoy good movies, cricket trivia and comic books.
+Hello, World! I am Anirudh from India. I am a full stack software engineer with a passion for learning technologies and automation, and I am a fan of 3 Cs — CS, Comic Books and Cricket.
 
 ## Projects
 
-### [AEM Tutorials](https://github.com/ani03sha/aem-demo)
+### [AEM Tutorials](https://github.com/ani03sha/AEM-Tutorials)
 Learn all about the AEM development :computer:. The best place for the newbies to start and a good refresher for the experienced AEM developers.
 
 ### [Quark Chain](https://github.com/ani03sha/QuarkChain)
@@ -58,7 +58,7 @@ One stop app for all information related consumer court cases in India. We provi
 - React JS
 
 ### Others
-- Mongo
+- MongoDB
 - ElasticSearch
 - Firebase
 - Data Structures and Algorithms
