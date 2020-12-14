@@ -47,7 +47,8 @@ lang: 'en'
 24. [Swap Nodes In Pairs](https://redquark.org/leetcode/0024-swap-nodes-in-pairs)
 25. [Reverse Nodes In K Group](https://redquark.org/leetocde/0025-reverse-nodes-in-k-group)
 26. [Remove Duplicates From Sorted Array](https://redquark.org/leetocde/0026-remove-duplicates-from-sorted-arrays)
-27. [Remove Element](https://leetcode.com/problems/remove-element)
+27. [Remove Element](https://leetcode.com/leetcode/0027-remove-element)
+28. [Implement StrStr](https://leetcode.com/leetcode/0028-implement-strstr)
 
 ### AEM
 0. [Day 00 — AEM Developer Series](https://redquark.org/aem/day-00-aem-developer-series/)
