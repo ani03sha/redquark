@@ -14,6 +14,7 @@ Personal website running on GatsbyJS, ReactJS and NodeJS.
 ### Data Structures & Algorithms
 1. [Introduction To Data Structures & Algorithms](https://redquark.org/dsa/introduction/)
 2. [Analysis Of Algorithms](https://redquark.org/dsa/analysis-of-algorithms/)
+3. [Asymptotic Notations](https://redquark.org/dsa/asymptotic-notations/)
 
 ### Concept Of The Day
 1. [Kadane Algorithm](https://redquark.org/cotd/kadane_algorithm/)
