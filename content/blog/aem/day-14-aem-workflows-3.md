@@ -161,7 +161,7 @@ This is even simpler, we are getting the stored value from the MetaDataMap using
 
 3. Deploy the code to your AEM instance using maven.
 
-4. Create a new workflow model using the above two workflow steps. The final structure will look like below - (see [last post](https://redquark.org/aem/day-13-aem-workflows-2/) for more details).
+4. Create a new workflow model using the above two workflow steps. The final structure will look like below — (see [last post](https://redquark.org/aem/day-13-aem-workflows-2/) for more details).
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -246,88 +246,77 @@ However, sometimes we wish to run a workflow programmatically.
 
 ### Code Example
 
-For e.g., the business wants to notify a specific group of users as soon as a some external service calls AEM. In this section, we will cater this case. We will create a `Sling Servlet` which when called, will execute a workflow (in our case, the workflow we created above).
+For e.g., the business wants to notify a specific group of users as soon as a some external service calls AEM. In this section, we will cater this case. We will create a **Sling Servlet** which when called, will execute a workflow (in our case, the workflow we created above).
 
-1. Navigate to the `core` module of AEM Multi Module project and create a new class `` and paste the following code in it - 
+1. Navigate to the `core` module of AEM Multi Module project and create a new class `org.redquark.aem.tutorials.core.servlets.ExecuteReviewContentServlet` and paste the following code in it - 
 
 ```java
-package org.redquark.aem.tutorials.core.workflows.process;
+package org.redquark.aem.tutorials.core.servlets;
 
+import com.adobe.granite.workflow.WorkflowException;
 import com.adobe.granite.workflow.WorkflowSession;
-import com.adobe.granite.workflow.exec.WorkItem;
-import com.adobe.granite.workflow.exec.WorkflowProcess;
-import com.adobe.granite.workflow.metadata.MetaDataMap;
-import com.day.cq.wcm.api.Page;
-import com.day.cq.wcm.api.PageManager;
-import org.apache.sling.api.resource.Resource;
+import com.adobe.granite.workflow.exec.WorkflowData;
+import com.adobe.granite.workflow.model.WorkflowModel;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.sling.api.SlingHttpServletRequest;
+import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.resource.ResourceResolver;
+import org.apache.sling.api.servlets.HttpConstants;
+import org.apache.sling.api.servlets.SlingSafeMethodsServlet;
 import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Reference;
-import org.redquark.aem.tutorials.core.services.ResourceResolverService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Iterator;
+import javax.servlet.Servlet;
+import java.io.IOException;
 import java.util.Objects;
 
-import static com.day.cq.wcm.api.NameConstants.NT_PAGE;
-import static org.redquark.aem.tutorials.core.constants.AppConstants.CHILD_PAGE_COUNT;
+import static org.apache.sling.api.servlets.ServletResolverConstants.SLING_SERVLET_METHODS;
+import static org.apache.sling.api.servlets.ServletResolverConstants.SLING_SERVLET_PATHS;
 import static org.redquark.aem.tutorials.core.constants.AppConstants.EQUALS;
-import static org.redquark.aem.tutorials.core.constants.AppConstants.PROCESS_LABEL;
-import static org.redquark.aem.tutorials.core.workflows.process.FetchChildrenPagesStep.PROCESS_LABEL_VALUE;
+import static org.redquark.aem.tutorials.core.servlets.ExecuteReviewContentServlet.PATHS;
 
 @Component(
-        service = WorkflowProcess.class,
+        service = Servlet.class,
         property = {
-                PROCESS_LABEL + EQUALS + PROCESS_LABEL_VALUE
+                SLING_SERVLET_METHODS + EQUALS + HttpConstants.METHOD_GET,
+                SLING_SERVLET_PATHS + EQUALS + PATHS
         }
 )
-public class FetchChildrenPagesStep implements WorkflowProcess {
+public class ExecuteReviewContentServlet extends SlingSafeMethodsServlet {
 
-    protected static final String PROCESS_LABEL_VALUE = "Fetch Children Pages";
-    private static final String TAG = FetchChildrenPagesStep.class.getSimpleName();
-    private static final Logger LOGGER = LoggerFactory.getLogger(FetchChildrenPagesStep.class);
-
-    @Reference
-    ResourceResolverService resourceResolverService;
+    protected static final String PATHS = "/bin/aemtutorials/executeWorkflow";
+    private static final long serialVersionUID = 4235730140092282985L;
+    private static final String TAG = ExecuteReviewContentServlet.class.getSimpleName();
+    private static final Logger LOGGER = LoggerFactory.getLogger(ExecuteReviewContentServlet.class);
 
     @Override
-    public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap metaDataMap) {
-        // Get the payload path of the page
-        String payloadPath = workItem.getWorkflowData().getPayload().toString();
-        // Get resource resolver object
-        ResourceResolver resourceResolver = resourceResolverService.getResourceResolver();
-        // Get resource corresponding to the given payload path
-        Resource resource = resourceResolver.getResource(payloadPath);
-        // Check if the type of resource is of a page
-        if (Objects.requireNonNull(resource).getResourceType().equals(NT_PAGE)) {
-            // Get the reference of the Page Manager class
-            PageManager pageManager = resourceResolver.adaptTo(PageManager.class);
-            // Get the reference of the Page
-            Page currentPage = Objects.requireNonNull(pageManager).getPage(payloadPath);
-            LOGGER.debug("{}: fetching count of children of page: {}", TAG, payloadPath);
-            // Child page count
-            int childPageCount = getChildrenPagesCount(currentPage, 0);
-            LOGGER.debug("{}: total children pages: {}", TAG, childPageCount);
-            // Set this value in the metadata map
-            workItem.getWorkflow().getMetaDataMap().put(CHILD_PAGE_COUNT, childPageCount);
-        }
-    }
-
-    private int getChildrenPagesCount(Page page, int count) {
-        // Get the iterator which contains children of page
-        Iterator<Page> pageIterator = page.listChildren();
-        // Check if the Iterator has values
-        while (pageIterator.hasNext()) {
-            // Get the current page in the iterator
-            final Page child = pageIterator.next();
-            // Check if the current child also has children
-            if (child.listChildren() != null) {
-                getChildrenPagesCount(child, count);
+    protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response) {
+        try {
+            // Get the payload path from the request
+            String payloadPath = request.getParameter("path");
+            if (!StringUtils.isEmpty(payloadPath)) {
+                // Getting the resource resolver
+                final ResourceResolver resolver = request.getResourceResolver();
+                // Get the workflow session from the resource resolver
+                final WorkflowSession workflowSession = resolver.adaptTo(WorkflowSession.class);
+                // Workflow model path - This is the already created workflow
+                final String model = "/var/workflow/models/aemtutorials/review-content";
+                // Get the workflow model object
+                final WorkflowModel workflowModel = Objects.requireNonNull(workflowSession).getModel(model);
+                // Create a workflow Data (or Payload) object pointing to a resource via JCR
+                // Path (alternatively, a JCR_UUID can be used)
+                final WorkflowData workflowData = workflowSession.newWorkflowData("JCR_PATH", payloadPath);
+                // Start the workflow!
+                workflowSession.startWorkflow(workflowModel, workflowData);
+                LOGGER.info("Workflow: {} started", model);
+                response.getWriter().println("Workflow Executed");
+            } else {
+                response.getWriter().println("Payload path is not present in the query parameter");
             }
-            count++;
+        } catch (IOException | WorkflowException e) {
+            LOGGER.error("{}: exception occurred: {}", TAG, e.getMessage());
         }
-        return count;
     }
 }
 ```
@@ -346,7 +335,7 @@ Following things are needed for this -
 
 ## Conclusion
 
-So, we saw that it is pretty easy to trigger a workflow programmatically. This post shows how to run a workflow from a servlet but we can easily use this code in a service/component/sling model etc.
+So, we saw that it is pretty easy to trigger a workflow programmatically. This post shows how to run a workflow from a servlet, but we can easily use this code in a service/component/sling model etc.
 
 We also saw how we can propagate our data between workflow steps using MetaDataMap API. 
 
