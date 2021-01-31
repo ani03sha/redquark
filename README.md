@@ -52,7 +52,8 @@ Personal website running on GatsbyJS, ReactJS and NodeJS.
 28. [Implement StrStr](https://redquark.org/leetcode/0028-implement-strstr)
 29. [Divide Two Integers](https://redquark.org/leetcode/0029-divide-two-integers)
 30. [Substring with Concatenation Of All Words](https://redquark.org/leetcode/0030-substring-with-concatenation-of-all-words)
-31 [Next Permutation](https://redquark.org/leetcode/0031-next-permutation)
+31. [Next Permutation](https://redquark.org/leetcode/0031-next-permutation)
+32. [Longest Valid Parentheses](https://redquark.org/leetcode/0032-longest-valid-parentheses)
 
 ### AEM
 0. [Day 00 — AEM Developer Series](https://redquark.org/aem/day-00-aem-developer-series/)
