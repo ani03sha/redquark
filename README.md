@@ -55,6 +55,7 @@ Personal website running on GatsbyJS, ReactJS and NodeJS.
 31. [Next Permutation](https://redquark.org/leetcode/0031-next-permutation)
 32. [Longest Valid Parentheses](https://redquark.org/leetcode/0032-longest-valid-parentheses)
 33. [Search In Rotated Sorted Array](https://redquark.org/leetcode/0033-search-in-rotated-sorted-array)
+34. [Find First And Last Position Of Element In Sorted Array](https://redquark.org/leetcode/0034-find-first-and-last-occurrence-of-element-in-sorted-array)
 
 ### AEM
 0. [Day 00 — AEM Developer Series](https://redquark.org/aem/day-00-aem-developer-series/)
