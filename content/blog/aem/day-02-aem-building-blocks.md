@@ -1,11 +1,11 @@
 ---
 title: 'Day 02 - AEM Building Blocks'
-date: 2020-6-17 00:47:00
+date: 2021-6-04 07:56:00
 category: 'AEM'
 draft: false
 ---
 
-In the previous [post](https://redquark.org/aem/day-01-introduction-to-aem/), we discussed basics of AEM and the reason behind its hype in the Digital Marketing space. In this post, we will go a bit more technical and will try to understand the architecture or the basic building blocks of AEM.
+In the previous [post](https://redquark.org/aem/day-01-introduction-to-aem/), we discussed basics of AEM and the reason behind its hype in the Digital Marketing space. In this post, we will go a bit more technical and will try to understand the architecture and the basic building blocks of AEM.
 
 Hence, without wasting more time, let's dive into the AEM architecture. Below is the high level diagram of AEM building blocks -
 
@@ -21,45 +21,45 @@ Java applications need a runtime environment to load class files, verify access 
 Modern versions of AEM require at least Java 8 and the latest version (6.5) also supports Java 11.
 
 ## Granite
-Granite is Adobe's **Open Web Stack**. A web stack is nothing but a compilation of software applications, often needed for web development i.e., for the development of web apps and websites. There are usually four major components of any web stack - 
+Granite is Adobe's **Open Web Stack**. A web stack is nothing but a compilation of software applications, often needed for web development i.e., for the development of web apps and websites. There are usually four major components of any web stack — 
 - Operating system
 - Database
 - Programming language
-- Web server
+- Web server.
 
 <p style='margin-top: 40px; margin-bottom: 40px;'></p>
 
-Granite includes following components - 
+Granite includes following components — 
 - Application server
 - OSGi container
-- JCR API's implementation - CRX
+- JCR API's implementation — CRX
 - Apache Sling Framework
 
 <p style='margin-top: 40px; margin-bottom: 40px;'></p>
 
-OSGi what...? Sling what...? :confused: I know these terms are confusing and to be honest they are the jargon which you will almost never hear in any other software applications except AEM. Maybe OSGi but not others. But fret not, we will discuss these below and as we move forward with this developer series, you will get more information about these :relieved:.
+OSGi what...? Sling what...? :confused: I know these terms are confusing and to be honest they are the jargon which you will almost never hear in any other software applications except AEM. Maybe OSGi but not others. But fret not, we will discuss them below and as we will move forward with this developer series, you will get more information about these :relieved:.
 
 ### Application Server
-We all know any web application requires a server to run, duh :unamused:. This server may be Tomcat, Jetty, JBoss etc. AEM jar file installation uses **[Apache Jetty](https://www.eclipse.org/jetty/)** which is packaged inside the jar. When we install AEM using jar, the AEM as a web application runs on Jetty.
+We all know any web application requires a server to run, and this server may be Tomcat, Jetty, JBoss etc. AEM jar file installation uses **[Apache Jetty](https://www.eclipse.org/jetty/)** which is packaged inside the jar. When we install AEM using jar (by double-clicking the jar or using the **java -jar** command), then AEM as a web application runs on Jetty.
 
 If you don't want to run AEM on Jetty but on any other application server, you can do that too. Ain't it cool :sunglasses:? In that case, you just have to get **AEM war** file and deploy it on the application server of your choice. How, you ask? Read [here](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/deploying/application-server-install.html).
 
 ### OSGi Container
-Now, you might be asking what on earth is OSGi (pronounced as "Oh-es-gee-eye" and not "Osgee")? It is nothing but a set of specifications/rules that defines an architecture for modular applications. In other words, using OSGi we can break our complex applications into simpler modules and can easily manage dependencies among them.
+Now, you might be asking what on earth is OSGi (pronounced as “Oh-es-gee-eye” and not "Osgee")? It is nothing but a set of specifications/rules that defines an architecture for modular applications. In other words, using OSGi we can break our complex applications into simpler modules and can easily manage dependencies among them.
 
 <p style="color: purple; font-weight: bold; margin-top: 40px; margin-bottom: 40px;">Modules in OSGi are called "Bundles" :package:.</p>
 
 - Bundles are nothing but jar files with a special manifest file. OSGi is a dynamic module system which means bundles can be installed, started, stopped, updated on the fly without shutting down the JVM.
 
-- OSGi manages the lifecycle of bundles and dependencies among them securely. A bundle needs to tell the OSGi container which java packages it imports :arrow_left: and which java packages it exports :arrow_right:.
+- OSGi manages the lifecycle of bundles and dependencies among them securely. A bundle needs to tell the OSGi container which java packages it imports (the packages this bundle needs) and which java packages it exports (the packages this bundle provides for other bundles to use).
 
 - OSGi even lets you have more than one version of the same package. So that we are saved from the **[JAR Hell](https://en.wikipedia.org/wiki/Java_Classloader#JAR_hell)** problem by the OSGi framework itself.
 
 - Developing on the OSGi platform means first building your application using OSGi APIs, then deploying it in an OSGi container.
 
 - The OSGi specification defines two things:
-- A set of services that an OSGi container must implement.
-- A contract between the container and your application.
+    1. A set of services that an OSGi container must implement.
+    2. Contract between the container and your application.
 
 <p style="color: purple; font-weight: bold; margin-top: 40px;">What kind of applications benefit from OSGi?</p>
 
@@ -67,12 +67,12 @@ Any application that is designed in a modular fashion where it is necessary to s
 
 Common OSGi implementations are [Equinox](https://www.eclipse.org/equinox/), [Knopflerfish](https://www.knopflerfish.org/) and [Apache Felix](https://felix.apache.org/). AEM uses Apache Felix as the OSGi container.
 
-I know that these are not enough details that justify using OSGi for AEM but as we progress in the blog series, we will get to know more about it.
+I know that these are not enough details that justify using OSGi for AEM but as we will progress in the blog series, we will get to know more about it.
 
 ### Java Content Repository (JCR)
 The JCR API provides a standard way to access content repositories. Content repositories is a super set of a traditional data repository that adds features such as author based versioning, full text searching, and allows storing of structured and unstructured data.
 
-It can handle structured as well as semi-structured information. It is said that JCR gives us the "best of both worlds", which means it combines attributes of file systems and databases.
+It can handle structured as well as semi-structured information. It is said that JCR gives us the “best of both worlds”, which means it combines attributes of file systems and databases.
 
 JCR stores data in the form of <span style="color: purple;">nodes</span> and <span style="color: purple;">properties</span>.
 
@@ -89,42 +89,42 @@ To combat this, [Apache Oak](https://jackrabbit.apache.org/oak/docs/index.html) 
 The latest versions of AEM (6.0 and above) use Apache Oak as their JCR implementation.
 
 ### Apache Sling
-[Apache Sling](https://sling.apache.org/) lets us access nodes in the content repository using RESTful HTTP requests. In other words, Sling exposes content in the content repository as HTTP resources, fostering a RESTful style application architecture.
+The [Apache Sling](https://sling.apache.org/) lets us access nodes in the content repository using RESTful HTTP requests. In other words, Sling exposes content in the content repository as HTTP resources, fostering a RESTful style application architecture.
 
-Apache Sling uses scripts(JavaScript, Groovy), template language (HTL or Sightly) or Java Servlets to process HTTP requests and JCR (Apache Oak) as its data store. 
+Apache Sling uses scripts(JavaScript, Groovy), template language (HTL) or Java Servlets to process HTTP requests and JCR (Apache Oak) as its data store. 
  
-- **OSGi** - The Sling application is built using OSGi bundles and uses OSGi core services.
-- **Sling API** - This API extends the Serlvet API and provides functionality to work on the content.
-- **Request Processing** - The request URL is first resolved to a resource and then based on resource, a script or serlvet to executed to handle the request.
-- **Resources** - Sling revolves around *resource*. While handling the request, resource is resolved and then the appropriate script or servlet is executed.
-- **Scripts and Servlets** - They are represented as resource themselves and are accessible via resource path.
-- **Launchpad** - This launches Sling as a web application.
+- **OSGi** — The Sling application is built using OSGi bundles and uses OSGi core services.
+- **Sling API** — This API extends the Servlet API and provides functionality to work on the content.
+- **Request Processing** — The request URL is first resolved to a resource and then based on resource, a script or servlet to executed to handle the request.
+- **Resources** — Sling revolves around *resource*. While handling the request, resource is resolved and then the appropriate script or servlet is executed.
+- **Scripts and Servlets** — They are represented as resource themselves and are accessible via resource path.
+- **Launchpad** — This launches Sling as a web application.
 
 ## AEM Modules
-In the above section, we discussed the technologies on which AEM is built. AEM as a CMS has different modules on which all the action happens. In this section, we will discuss two most important modules in AEM - <span style="color: purple;">Sites</span> and <span style="color: purple;">Assets</span>.
+In the above section, we discussed the technologies on which AEM is built. AEM as a CMS has different modules on which all the action happens. In this section, we will discuss two most important modules in AEM — <span style="color: purple;">Sites</span> and <span style="color: purple;">Assets</span>.
 
 ### Sites
 Using this module, an organization can develop websites with rich features. These websites are sophisticated, consistent and easily manageable. This module provides abstraction to site creation process that non-technical digital marketers can create web pages with rich experience without any reliance on software developers.
 
 AEM Sites has three main components -
 
-- **Templates** - Using templates we can specify layout of a web page. These are highly customizable and consistent.
-- **Pages** - Any number of pages can be created using template(s). Actual content of the website goes on the pages.
-- **Components** - These are the building blocks of pages. These define a small portion of the page and can be dragged and dropped. Editing content in the components is as easy as editing a Facebook post. Examples of components are - Text, Image, Video, Carousel, Accordion etc.
+- **Templates** — Using templates we can specify layout of a web page. These are highly customizable and consistent.
+- **Pages** — Any number of pages can be created using template(s). Actual content of the website goes on the pages.
+- **Components** — These are the building blocks of pages. These define a small portion of the page and can be dragged and dropped. Editing content in the components is as easy as editing a Facebook post. Examples of components are — Text, Image, Video, Carousel, Accordion etc.
 
-The development team has to develop the components once and then these can be used any number of time on any number of pages created by any number of templates :star_struck: .
+The development team has to develop the components once, and then they can be used multiple times on any page(s) :star_struck:.
 
 ### Assets
 Assets means any media or content. This module helps organization create, store, deliver content for any screen or device. It allows us to store our content and manage our visual assets on cloud, enabling our teams to access project files from multiple locations. This central storage improves work efficiency to a great extent.
 
-An author can also edit the assets, their metadata using just the out-of-the-box functionality provided by the AEM. These assets can be used on the website pages and are easily manageable.
+An author can also edit the assets and their metadata using **out-of-the-box** functionality provided by the AEM. These assets can be used on the website pages and are easily manageable.
 
 ## Custom Project Code
 After learning about the AEM's in built building blocks, in this section, we will learn about the custom code.
 
-When an organization gets AEM license from Adobe and run the JAR file in their system, AEM can be accessed as a web application with enough features to build on top of it. Since one organization has different requirements than the other, they can choose to build their custom websites on top of AEM.
+When an organization gets AEM license from Adobe and run the JAR file in their system, AEM can be accessed as a web application with a plethora of features. Since one organization has different requirements than the other, they build their custom websites on top of AEM.
 
-They can create their own -
+They can create their own —
 - Templates
 - Pages
 - Components
@@ -134,12 +134,12 @@ They can create their own -
 - Tags
 - ... and many more.
 
-Here, the development teams come into picture. They develop their custom code based on the requirements of the organization using AEM APIs. After completion, this code is deployed on top of AEM. Once the code is deployed, the content authors/digital marketers can edit the components, pages, templates etc. without any reliance on the development team. THIS IS THE POWER OF AEM :muscle:.
+Here, the development teams come into picture. They develop their custom code based on the requirements of the organization using AEM APIs. After completion, this code is deployed on top of AEM. Once the code is deployed, the content authors/digital marketers can edit the contents of the components, pages, templates etc. without any reliance on the development team. THIS IS THE POWER OF AEM :muscle:.
 
-In this developer series, we will be doing the same - develop custom code on top of AEM.
+In this developer series, we will be doing the same — develop custom code on top of AEM.
 
 ## Conclusion
-This is a long post and with a lot of theory :tired_face:. But this theory is needed to understand the concepts behind AEM. So, I hope you are still enthusiastic about AEM.
+This is a long post and with a lot of theory :tired_face:. But this theory is essential to understand the concepts behind AEM. So, I hope you are still enthusiastic about AEM.
 
 I would love to hear your thoughts on this post and would like to have suggestions from you to make this post better.
 
