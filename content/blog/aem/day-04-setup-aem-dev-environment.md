@@ -1,6 +1,6 @@
 ---
 title: 'Day 04 - Setup AEM Development Environment'
-date: 2021-6-04 12:16:00
+date: 2021-6-06 11:36:00
 category: 'AEM'
 draft: false
 ---
