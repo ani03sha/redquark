@@ -4,6 +4,7 @@ date: 2021-6-04 12:16:00
 category: 'AEM'
 draft: false
 ---
+
 Hola amigos/amigas :wave:! So far in this AEM development series we have discussed the following questions — 
 - What is AEM?
 - Why do we need AEM?
@@ -18,11 +19,13 @@ In this post, we will set up a development environment for AEM and discuss in de
 Since AEM is basically a web application based on Java, JDK should be installed in our local system. Read this [official documentation](https://docs.oracle.com/en/java/javase/11/install/) for installing Java. This document is for Java 11, but steps should be similar to Java 8.
 
 Once you have installed Java, open command prompt in your system and execute the following command
+
 ```shell
 java -version
 ```
 
-If you have installed Java correctly, the output should show your installed Java version like this -
+If you have installed Java correctly, the output should show your installed Java version (based on the Java version installed in your system) like this -
+
 ```shell
 java version "1.8.0_251"
 Java(TM) SE Runtime Environment (build 1.8.0_251-b08)
@@ -30,10 +33,11 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.251-b08, mixed mode)
 ```
 
 ### Maven 3.3.9 or higher
-Maven is a build tool which is needed to compile Java based projects. The AEM project we are going to create will also be a Java based project, therefore, having maven installed in your system is a must.
+Maven is a build tool which is needed to compile Java projects. The AEM project we are going to create will also be a Java project, therefore, having maven installed in your system is a must.
 Read this [official documentation](https://maven.apache.org/install.html) for the steps to install maven in your local system.
 
 Once you have installed maven, execute following command in the command prompt
+
 ```shell
 mvn -version
 ```
@@ -50,6 +54,7 @@ OS name: "windows 10", version: "10.0", arch: "amd64", family: "windows"
 
 #### Setup settings.xml file
 Once the maven is installed, we need to set up ```settings.xml``` file which will contain the information of maven repository and other related metadata. Therefore, create a file named `settings.xml` at to **~/.m2/settings.xml** and paste the following text in it.
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <settings xmlns="https://maven.apache.org/SETTINGS/1.0.0" 
@@ -107,6 +112,7 @@ Once the maven is installed, we need to set up ```settings.xml``` file which wil
 ```
 
 Now, run the following command -
+
 ```shell
 mvn help:effective-settings
 ```
@@ -114,18 +120,20 @@ mvn help:effective-settings
 In the output, at the end, if you see ```<activeProfile>adobe-public</activeProfile>```, it means everything is fine. If not, then revisit the above steps carefully.
 
 ### IntelliJ IDEA
-The IntelliJ IDEA is a modern IDE used for Java based application development. You can download it from the [official website](https://www.jetbrains.com/idea/download/) of JetBrains.
+The IntelliJ IDEA is a modern IDE used for Java based application development. You can download it from JetBrains [official website](https://www.jetbrains.com/idea/download/).
 
 ### NodeJS
 Latest AEM projects also includes front end modules (front end JavaScript based applications). Therefore, to build those, we also need to have the latest NodeJS and NPM installed in our system. See this [official documentation](https://nodejs.org/en/download/) to do this.
 
 Once installed, run following two commands in the command prompt - 
+
 ```
 node -v
 npm -v
 ```
 
-The output will be the versions of NodeJS and NPM respectively.
+The output will be the versions of NodeJS and NPM respectively -
+
 ```
 v13.8.0
 6.13.6
@@ -138,26 +146,42 @@ After performing above steps, we will now create a new AEM project using Intelli
 1. Launch IntelliJ-Idea by clicking on the icon. You will see welcome screen of IntelliJ as below - 
 <img src='../media/intellij-welcome-screen.jpg' alt='IntelliJ Idea welcome screen' style="display: block; margin-left: auto; margin-right: auto; border: 5px solid black;">
 
+<p style='margin-top: 40px; margin-bottom: 40px;'></p>
+
 2. Click on the **Configure** icon in the bottom right corner and select **Plugins**.
 
-3. Next screen will show you the installed plugins. Type **AEM** in the search bar. You will see two plugins ***AEM IDE Tooling 4 IntelliJ*** (this is paid now - this is not a must and you should be able to navigate through this tutorial without much issue) and ***AEM IntelliJ Plugin***. Install both and restart IDE.
+<p style='margin-top: 40px; margin-bottom: 40px;'></p>
+
+3. Next screen will show you the installed plugins. Type **AEM** in the search bar. You will see two plugins ***AEM IDE Tooling 4 IntelliJ*** (this plugin is paid now — however, it is not a must, and you should be able to navigate through this tutorial without much issue) and ***AEM IntelliJ Plugin***. Install both and restart IDE.
 <img src='../media/aem-intellij-plugins.jpg' alt='AEM IntelliJ Plugins' style="display: block; margin-left: auto; margin-right: auto; border: 5px solid black;">
 
-4. Once restarted, you will see welcome screen again. Click on **Create New Project** and select **Maven** from the side rail. Select **Java SDK** and check **Create from archetype**.
+<p style='margin-top: 40px; margin-bottom: 40px;'></p>
+
+4. Once the IDE restarts, you will see welcome screen again. Click on **Create New Project** and select **Maven** from the side rail. Select **Java SDK** and check **Create from archetype**.
 <img src='../media/aem-new-project.jpg' alt='AEM New Project' style="display: block; margin-left: auto; margin-right: auto;">
 
-5. Select **com.adobe.granite.archetypes:aem-project-archetype** and select **aem-project-archetype:23** (or whichever is newer) from the list. Click **Next**.
+<p style='margin-top: 40px; margin-bottom: 40px;'></p>
+
+5. Select **com.adobe.granite.archetypes:aem-project-archetype** and select **aem-project-archetype:23** (or whichever is newer) from the list. Click **Next**. Please note that, different archetypes can generate different project structures. but the basic idea will remain the same.
+
+<p style='margin-top: 40px; margin-bottom: 40px;'></p>
 
 6. In this screen, enter the details as below and click **Next**.
 <img src='../media/aem-project-details.jpg' alt='AEM Project Details' style="display: block; margin-left: auto; margin-right: auto;">
 
+<p style='margin-top: 40px; margin-bottom: 40px;'></p>
+
 7. On the next screen, enter project details as below and click **Finish**.
 <img src='../media/aem-archetype-details.jpg' alt='AEM Archetype Details' style="display: block; margin-left: auto; margin-right: auto;">
 
+<p style='margin-top: 40px; margin-bottom: 40px;'></p>
+
 8. As soon as you click on **Finish**, a maven build will kick off which will download all the required dependencies for your project.
 
+<p style='margin-top: 40px; margin-bottom: 40px;'></p>
+
 9. Once the build is successful, you will have the following project structure in your IDE. In the below screenshot, you can see different modules in an AEM project and also the maven profiles which will be used for building and deploying the code.
-<img src='../media/aem-project-structure.jpg' alt='AEM Project Structure' style="display: block; margin-left: auto; margin-right: auto;">
+<img src='../media/aem-project-structure.jpg' alt='AEM Project Structure' style="display: block; margin-left: auto; margin-right: auto;">   
 
 <p style="margin-top: 40px; margin-bottom: 40px;">Congratulations :clap:! You have created your first AEM project successfully. You should be proud of yourself. In the next section we will understand the purpose of different modules in an AEM project.</p>
 
@@ -165,10 +189,10 @@ After performing above steps, we will now create a new AEM project using Intelli
 
 ## AEM Project Modules
 
-Let's discuss briefly about different parts of AEM project -
+Let's discuss briefly about different modules of AEM project -
 
 ### core
-All the OSGi related code sits in here. This is actually the bundle part of your AEM project that is deployed on AEM. Thus, all the Java implementations reside here. All the dependencies needed for the **core** bundle to work lie in the ```~/core/pom.xml```. The core bundle is installed as a part of **ui.apps** module, but we can install then independently also (however, this is very rare).
+All the OSGi (or Java) related code sits in here. This is actually the bundle part of your AEM project that is deployed in AEM. Thus, all the Java implementations reside here. All the dependencies needed for the **core** bundle to work are present in the ```~/core/pom.xml```. The core bundle is installed as a part of **ui.apps** module, but we can install it independently also (however, this is very rare).
 
 You can install the bundle directly on AEM using following command - 
 
@@ -176,12 +200,12 @@ You can install the bundle directly on AEM using following command -
 mvn -PautoInstallBundle clean install
 ```
 
-If installed successfully, you can view this in Apache Felix Console or System Console at - http://<host>:<port>/system/console/bundles. [Read more](http://localhost:8000/aem/day-03-aem-consoles/#felix-console).
+If installed successfully, you can view this in Apache Felix Console or System Console at — http://<host>:<port>/system/console/bundles. [Read more](http://redquark.org/aem/day-03-aem-consoles/#felix-console).
 
 ### ui.apps
-This module contains all the rendering code which includes — HTL (Sightly scripts), JavaScript, CSS (normally in the form of clientlibs). The components (building blocks of web pages) also lie here. Along with these, we have our templates, OSGi configurations as well. 
+This module contains all the rendering code which includes — HTL (Sightly scripts), JavaScript, CSS (normally in the form of clientlibs). The page components (building blocks of web pages) also reside here. Along with these, we have our templates, OSGi configurations as well. 
 
-This module also contain Java code, but this practice is rarely used. As a rule of thumb, all Java code goes into the **core** module and all rendering code goes into **ui.apps** module.
+This module also contains Java code, but this practice is rarely used. As a rule of thumb, all Java code goes into the **core** module and all rendering code goes into **ui.apps** module.
 
 This module stores our project structure that is present in the ```/apps``` in [JCR (or CRXDE)](https://redquark.org/aem/day-03-aem-consoles/#crxde). This lets us store our code easily in version control.
 
@@ -214,13 +238,13 @@ All our AEM pages are stored under **/content/** and all templates and their pol
 ```
 
 ### it.tests
-As the name suggests, this is an OSGi bundle which contains unit tests, and it is not deployed in the production. This is not important for our application, and we will remove this module altogether.
+As the name suggests, this is an OSGi bundle which contains unit tests, and it is not deployed in the production. This is not important for this developer series, therefore, we will remove this entirely from our project structure.
 
 ### it.launcher
-It helps us to trigger the remote JUnit in **it.tests**. This is also not important to our application, and we will remove this module also.
+It helps us to trigger the remote JUnit in **it.tests**. This is also not important to our developer series, and we will remove this module also.
 
 ### ui.frontend
-This is an optional thing. In modern AEM applications, we have a dedicated front-end build mechanism using Webpack. We can leverage modern web development frameworks like React, Angular, Vue etc for creating our websites' layouts and deploy them on AEM.
+This is an optional thing. In modern AEM applications, we have a dedicated front-end build mechanism using **Webpack**. We can leverage modern web development frameworks like React, Angular, Vue etc for creating our websites' layouts and deploy them on AEM.
 
 You must remember that when we were creating project, we chose ```frontendModule = react```. Thus, if you inspect the ```~/ui.frontend/src```, you will see React based components. Similarly, we can use ```frontendModule = angular``` for Angular based project structure. 
 
@@ -232,7 +256,7 @@ Once we build the **ui.frontend** module, it is deployed into AEM as a part of *
 This is an empty module. Its only job is to combine all the maven modules and deploy them on AEM as a single package.
 
 ### root
-The root module of the AEM project is the parent of all the modules we discussed above. It defines configurations specifying all the child modules, default AEM login credentials dependencies and plugins.
+The root (or parent) module of the AEM project is the parent of all the modules we discussed above. It defines configurations specifying all the child modules, default AEM login credentials dependencies and plugins.
 
 ```xml
 <modules>
@@ -253,7 +277,6 @@ As you can see, the ```<modules>...</modules>``` tag contains all the children m
 If you inspect the parent pom.xml or ```~/pom.xml```, you will find something like this - 
 
 ```xml
-
 <core.wcm.components.version>${enter latest version}</core.wcm.components.version>
                     .
                     .
@@ -292,6 +315,7 @@ The dependencies mentioned above will deploy the core components as part of your
 Every AEM project comes with some boilerplate code. We will not be needing it as we are going to create everything from the scratch hence we will remove the stuff that we don't need.
 
 1. Go to parent pom ```~/pom.xml``` and remove **it.launcher** and **it.tests** from the module. Now, the <modules> tag will look like this.
+
 ```xml
 <modules>
     <module>all</module>
@@ -309,23 +333,30 @@ Every AEM project comes with some boilerplate code. We will not be needing it as
 
 4. Go to ```~/ui.apps/src/main/content/jcr_root/apps/aemtutorials/components/``` and delete all the components except **page**.
 
-5. Delete ```~/ui.apps/src/main/content/jcr_root/apps/aemtutorials/components/config/author```, ```~/ui.apps/src/main/content/jcr_root/apps/aemtutorials/components/config/stage``` and ```~/ui.apps/src/main/content/jcr_root/apps/aemtutorials/components/config/prod```.
-
-
 ## Deploy Code to AEM
 Our project is now ready to be deployed on AEM.
 
 1. Start your AEM Server. How? See [here](https://redquark.org/aem/day-03-aem-consoles/#install-aem).
 
+<p style='margin-top: 40px; margin-bottom: 40px;'></p>
+
 2. Click on **Maven** in the right of your IntelliJ IDEA screen, you will see something like this -
 <img src='../media/aem-maven-view.jpg' alt='AEM Maven View' style="display: block; margin-left: auto; margin-right: auto;">
 
-3. Expand **Profiles** in the Maven view and select ```autoInstallSinglePackage```.
+<p style='margin-top: 40px; margin-bottom: 40px;'></p>
+
+3. Expand **Profiles** in the Maven view and select `autoInstallSinglePackage`.
+
+<p style='margin-top: 40px; margin-bottom: 40px;'></p>
 
 4. Now, expand **AEM Tutorials (root)** and click on **clean**. Let the build process run.
 
+<p style='margin-top: 40px; margin-bottom: 40px;'></p>
+
 5. Once the build is successful, click on **install**. Now, the project will be built after downloading dependencies and install the project on AEM.
 <img src='../media/aem-project-build.jpg' alt='AEM Project Build' style="display: block; margin-left: auto; margin-right: auto;">
+
+<p style='margin-top: 40px; margin-bottom: 40px;'></p>
 
 6. If everything is correct, you will see following in your console
 
@@ -349,8 +380,12 @@ Package installed in 22861ms.
 [INFO] ------------------------------------------------------------------------
 ```
 
+<p style='margin-top: 40px; margin-bottom: 40px;'></p>
+
 7. Once installed, navigate to [CRXDE](http://localhost:4502/crx/de) and you will see the following under ```~/apps```.
 <img src='../media/aem-project-apps.jpg' alt='AEM Project Apps' style="display: block; margin-left: auto; margin-right: auto;">
+
+<p style='margin-top: 40px; margin-bottom: 40px;'></p>
 
 8. Now, navigate to [Apache Felix Console](http://localhost:4502/system/console/bundles) and you will see that your bundles are installed. Make sure they are in the **Active** state.
 <img src='../media/aem-project-bundle.jpg' alt='AEM Project Bundle' style="display: block; margin-left: auto; margin-right: auto;">
@@ -365,25 +400,37 @@ Below are the steps to leverage this plugin -
 
 1. Go to this [link](https://repo1.maven.org/maven2/org/apache/jackrabbit/vault/vault-cli/3.4.4/) and download the FileVault zip and extract it your favorite location.
 
-2. Now go to this [link](https://plugins.jetbrains.com/plugin/7328-intellivault) and download the IntelliVault.jar file
+<p style='margin-top: 40px; margin-bottom: 40px;'></p>
+
+2. Now go to this [link](https://plugins.jetbrains.com/plugin/7328-intellivault) and download the IntelliVault.jar file.
+
+<p style='margin-top: 40px; margin-bottom: 40px;'></p>
 
 3. Go to IntelliJ IDEA and File :arrow_right: Settings... :arrow_right: Plugins :arrow_right: Settings icon :arrow_right: Install Plugin from Disk... :arrow_right: Apply :arrow_right: OK.
 <img src='../media/aem-install-intellivault.jpg' alt='AEM Install IntelliVault' style="display: block; margin-left: auto; margin-right: auto;">
 
+<p style='margin-top: 40px; margin-bottom: 40px;'></p>
+
 4. Once done, restart the IDE.
+
+<p style='margin-top: 40px; margin-bottom: 40px;'></p>
 
 5. Go to File :arrow_right: Settings... :arrow_right: Tools :arrow_right: IntelliVault and configure as show in the below screenshot. "Vault Directory" is the path for zip file that you downloaded in step #1.
 <img src='../media/aem-vault-config.jpg' alt='AEM Vault Config' style="display: block; margin-left: auto; margin-right: auto;">
 
+<p style='margin-top: 40px; margin-bottom: 40px;'></p>
+
 6. Now, to test your installation, go to ```~/ui.apps/src/main/content/jcr_root/apps/aemtutorials/clientlibs``` :arrow_right: IntelliVault :arrow_right: Pull from CRX... and follow the instructions on the screen.
 <img src='../media/aem-vault-sync.jpg' alt='AEM Vault Sync' style="display: block; margin-left: auto; margin-right: auto;">
 
-If everything is working as expected up to this point, then you should pat yourself on the back :ok_hand:. You have set up your AEM development environment in local. Congratulations :clap:!
+<p style='margin-top: 40px; margin-bottom: 40px;'></p>
+
+If everything is working as expected up to this point, then you should pat yourself on the back :clap:. You have set up your AEM development environment in local. Congratulations!
 
 ## Conclusion
 Phew! it was a long post :weary:. We battled our way to set up an AEM development environment in this post.
 
-I have pushed this project on the GitHub — [AEM Tutorials](https://github.com/ani03sha/AEM-Tutorials). You can refer to it in case you miss something. Also, if you like the post then fork it, star it and contribute into it.
+I have pushed this project on the GitHub — [AEM Tutorials](https://github.com/ani03sha/AEM-Tutorials). You can refer to it in case you miss something. Also, if you like the post then fork it, star it and contribute to it.
 
 I would love to hear your thoughts on this post and would like to have suggestions from you to make this post better.
 
