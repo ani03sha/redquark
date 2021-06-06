@@ -1,6 +1,6 @@
 ---
 title: 'Day 05 - Develop AEM Components and Templates'
-date: 2020-6-06 12:00:00
+date: 2021-6-06 12:00:00
 category: 'AEM'
 draft: false
 ---
