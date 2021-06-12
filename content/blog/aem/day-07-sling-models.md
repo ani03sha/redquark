@@ -1,25 +1,35 @@
 ---
 title: 'Day 07 - Sling Models'
-date: 2020-7-17 06:00:00
+date: 2021-6-12 19:42:00
 category: 'AEM'
 draft: false
 ---
 
-Howdy fellow developers :wave:! In the [last post](https://redquark.org/aem/day-06-htl-clientlibs/), we learned basics of HTL and clientlibs. Both HTL and clientlibs are responsible for rendering an AEM component on the frontend. There are times where we need to perform complex business logic on the backend and AEM is no exception.
+Howdy fellow developers :wave:! In the [last post](https://redquark.org/aem/day-06-htl-clientlibs/), we learned the basics of HTL and clientlibs. Both HTL and clientlibs are responsible for rendering an AEM component on the frontend. But there are times when we need to perform complex business logic on the backend.
+
+<div style="margin-top: 40px; margin-bottom: 40px;"></div>
 
 AEM uses the [OSGi](https://www.osgi.org/developer/what-is-osgi/) framework for its backend activities and as we know from [part 2](https://redquark.org/aem/day-02-aem-building-blocks/#osgi-container) of this developer series, we write our Java code in OSGi bundle and deploy it to AEM.
 
-In this post, we will create a simple component and perform some business logic on it using Java and based on that we will render the output on the page. The Java code will reside in a special model class known as **Sling Model**.
+<div style="margin-top: 40px; margin-bottom: 40px;"></div>
+
+In this post, we will create a simple component and perform some business logic on it using Java and after that we will render the output on the page. For the business logic, we will use a special construct called the **Sling Model**.
 
 ## Sling Models
-Wouldn't it be great if you have a direct way to map your JCR node properties to your model class? Say what? Yeah, of course, it would be :sunglasses:. Sling Models lets us do this in AEM.
+Wouldn't it be great if we have a direct way to map your JCR node properties to our model class? Of course, it would be awesome :sunglasses:. Sling Models lets us do that in AEM.
 
-Sling Models are "pure" POJOs which map Sling objects (resources, request objects etc.).
+<div style="margin-top: 40px; margin-bottom: 40px;"></div>
+
+Sling Models are **pure** POJOs which map Sling objects (`resources`, `request` objects etc.).
+
+<div style="margin-top: 40px; margin-bottom: 40px;"></div>
 
 Since Sling Models are annotation-driven Plain Old Java Objects (POJOs), annotations are used a lot. They allow us to map resource properties, assign default values, inject OSGi services and much more.
 
 ### Basic Usage
-The most simplest form of using Sling Models is in which the class is annotated with `@Model`, and with one `adaptable`. The fields which need to be injected are annotated with `@Inject`.
+The simplest form of using Sling Models is in which the class is annotated with `@Model`, and with at least one `adaptable`. The fields which need to be injected are annotated with `@Inject`. The injected fields are normally the properties of a component (which the content authors normally set via component dialog).
+
+A simple Sling Model can look like this - 
 
 ```java
 @Model(adaptables = Resource.class)
@@ -35,11 +45,13 @@ public class User {
     private String contact;
 }
 ```
-In the above code, we are adapting the class with `org.apache.sling.api.resource.Resource`. A `Resource` is a piece of content on which Sling acts. Here, we are mapping the properties stored in the node represented by the current resource will be mapped to the private fields `name`, `address` and `contact` (provided they are stored with same name in the JCR. If they are not, we can use `@Named` annotation to resolve this).
+
+In the above code, we are adapting the class with the `org.apache.sling.api.resource.Resource`. A `Resource` is a piece of content on which Sling acts. In this case, a resource is the JCR node for the `User` component added on the page. Everything in Sling is a resource. Here, we are mapping the properties stored in the node represented by the current resource to the private fields `name`, `address` and `contact` (provided they are stored with same name in the JCR. If they are not, we can use `@Named` annotation to resolve this).
 
 <div style="margin-top: 40px; margin-bottom: 40px;"></div>
 
 In the case of interfaces, the field names are replaced by their respective methods.
+
 ```java
 @Model(adaptables = Resource.class)
 public interface User {
@@ -55,7 +67,7 @@ public interface User {
 }
 ```
 
-Now, if we want to use this class in our client code, it is as simple as using any adapter framework. For example, if we wish to use the above class in our Java client code, then we can do something like below - 
+Now, if we want to use this class/interface in our client code, it is as simple as using any adapter framework. For example, we can do something like below - 
 
 ```java
 import org.apache.sling.api.resource.Resource;
@@ -67,10 +79,10 @@ Resource resource = ...
 User user = resource.adaptTo(User.class)
 ```
 
-As with any **AdapterFactories**, if the adaptation cannot be made, `adaptTo` will return null.
+As with any **AdapterFactories**, if the adaptation cannot be made, the `adaptTo` method will return null.
 
 ### Usage in HTL
-We can call our Sling Models in component's HTL code using `data-sly-use` construct by giving fully qualified name of our model class
+We can call our Sling Models in component's HTL code using `data-sly-use` construct by giving the fully qualified name of our model class. A sample code is below - 
 
 ```html
 <sly data-sly-use.user="org.redquark.aem.tutorials.core.models.User" />
@@ -80,10 +92,10 @@ We can call our Sling Models in component's HTL code using `data-sly-use` constr
 <p>Contact: ${user.contact}</p>
 ```
 
-In the above code, we are getting the reference of our Sling Model in `user` object and then we are getting the properties values using the `dot(.)` operator.
+In the above code, we are getting the reference of our Sling Model in `user` object, and then we are getting the properties values using the `dot(.)` operator on that object.
 
 ### PostConstruct Methods
-These methods are annotated with `@PostConstruct` annotation and are invoked as soon as all the injections are completed. If the injection fails, then the method won't be called.
+These methods are annotated with `@PostConstruct` annotation and are invoked as soon as all the injections are completed. If the injection fails, then the method won't be called. We can perform our business logic here.
 
 ```java
 @Model(adaptables = Resource.class)
@@ -121,6 +133,7 @@ After discussing the basics of Sling Models, we are now ready to create our comp
 <img src='../media/aem-user-component.jpg' alt='AEM User Component' style="display: block; margin-left: auto; margin-right: auto; border: 5px solid black;">
 
 2. Create a new node **cq:dialog** of type **nt:unstructured** at path `/apps/aemtutorials/components/content/user` with the following definition - 
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
@@ -200,6 +213,7 @@ After discussing the basics of Sling Models, we are now ready to create our comp
 ```
 
 3. Navigate to your Java project and create a new Java interface `org.redquark.aem.tutorials.core.models.User` with the following code in it - 
+
 ```java
 package org.redquark.aem.tutorials.core.models;
 public interface User {
@@ -223,9 +237,10 @@ public interface User {
 }
 ```
 
-Here we are designing a user information model with four properties - id, name, gender and address. Out of these four, **Id** is the one which will be automatically generated by the backend code (It can be authored too in the current implementation).
+Here we are designing a user information model with four properties —` id`, `name`, `gender` and `address`. Out of these four, **Id** is the one which will be automatically generated by the backend code (However, we can also make it authorable).
 
 4. As an implementation of the above interface, create a new class `org.redquark.aem.tutorials.core.models.impl.UserImpl` with the following code - 
+
 ```java
 package org.redquark.aem.tutorials.core.models.impl;
 import org.apache.sling.api.SlingHttpServletRequest;
@@ -320,6 +335,7 @@ public class UserImpl implements User {
 ```
 
 Here, we have adapted the class with `@Model` annotation which will make the OSGi container treat this class as a Sling Model. In the `@Model` annotation, we have four properties - 
+
 ```java
 // Defines which type of adaptable we are dealing with. Generally, there are two -
 // 1. Resource
@@ -333,9 +349,9 @@ resourceType
 defaultInjectionStrategy
 ```
 
-we are mapping all the fields in the dialog with the variables of the class using `@ValueMapValue` which injects a `ValueMap` value. If **via** is not set, it will automatically take resource if the adaptable is the **SlingHttpServletRequest**. If **name** is not set the name is derived from the method/field name.
+We are mapping all the fields in the dialog with the variables of the class using `@ValueMapValue` which injects a `ValueMap` value. If **via** is not set, it will automatically take resource if the adaptable is the **SlingHttpServletRequest**, if **name** is not set the name is derived from the method/field name.
 
-In the `@PostConstruct` annotated method `init()`, we are getting unique id from a utility class `IDGenerator` and setting it in the `id` field in the component. Remember this will be executed as soon as all the field are injected.
+In the `@PostConstruct` annotated method `init()`, we are getting unique ID from a utility class `IDGenerator` and setting it in the `id` field in the component. Remember this will be executed as soon as all the field are injected.
 
 5. Now, create a utility class `org.redquark.aem.tutorials.core.utils.IDGenerator` with the following code in it - 
 ```java
@@ -371,9 +387,10 @@ public class IDGenerator {
 }
 ```
 
-This is standard Java implementation of generating a unique id of `n` length.
+This is standard Java implementation of generating a unique ID of `n` length.
 
 6. Now, go to `/apps/aemtutorials/components/content/user/user.html` and paste the following code in it - 
+
 ```html
 <sly data-sly-use.user="org.redquark.aem.tutorials.core.models.User"></sly>
 <sly data-sly-use.template="core/wcm/components/commons/v1/templates.html"></sly>
@@ -389,6 +406,7 @@ This is standard Java implementation of generating a unique id of `n` length.
 In the first line, we are getting reference of our `User` Sling Model in `user` object using `data-sly-use` construct. Then using this object we are getting field values from the Sling Model and rendering them on the page.
 
 7. Deploy this code to AEM using maven
+
 ```shell
 mvn -PautoInstallSinglePackage clean install
 ```
@@ -400,7 +418,7 @@ mvn -PautoInstallSinglePackage clean install
 
 
 ## Conclusion
-Congratulations!! 🙋 we have duelled with Sling Model classes. I hope you enjoyed this post.
+Congratulations!! 🙋 we have dueled with Sling Model classes. I hope you enjoyed this post.
 
 As always, you can find the complete code of this project on my [GitHub](https://github.com/ani03sha/AEM-Tutorials). Feel free to fork or open issues, if any.
 
