@@ -69,7 +69,7 @@ Personal website running on GatsbyJS, ReactJS and NodeJS.
 8. [Day 08 — OSGi Components and Services](https://redquark.org/aem/day-08-osgi-components-services)
 9. [Day 09 — Sling Servlets Part I](https://redquark.org/aem/day-09-sling-servlets-1)
 10. [Day 10 — Sling Servlets Part II](https://redquark.org/aem/day-10-sling-servlets-2)
-11. [Day 11 — Custom OSGi Configuration](https://redquark.org/aem/custom-osgi-configuration)
+11. [Day 11 — Custom OSGi Configuration](https://redquark.org/aem/day-11-custom-osgi-configuration/)
 12. [Day 12 — AEM Workflows Part I](https://redquark.org/aem/day-12-aem-workflows-1)
 13. [Day 13 — AEM Workflows Part II](https://redquark.org/aem/day-13-aem-workflows-2)
 14. [Day 14 — AEM Workflows Part III](https://redquark.org/aem/day-14-aem-workflows-3)
