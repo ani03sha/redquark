@@ -59,7 +59,8 @@ lang: 'en'
 34. [Find First And Last Position Of Element In Sorted Array](https://redquark.org/leetcode/0034-find-first-and-last-occurrence-of-element-in-sorted-array)
 
 ### Problem Solving
-1. [Bit Magic — Part 1](https://redquark.org/problem-solving/bit-manipulation/bit-magic-1/)
+1. [Bit Magic — Part 1](https://redquark.org/problem-solving/bit-manipulation/bit-magic-1)
+2. [Bit Magic — Part 2](https://redquark.org/problem-solving/bit-manipulation/bit-magic-2)
 
 ### AEM
 0. [Day 00 — AEM Developer Series](https://redquark.org/aem/day-00-aem-developer-series/)
