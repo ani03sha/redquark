@@ -48,7 +48,7 @@ lang: 'en'
 23. [Merge K Sorted Lists](https://redquark.org/leetcode/0023-merge-k-sorted-lists)
 24. [Swap Nodes In Pairs](https://redquark.org/leetcode/0024-swap-nodes-in-pairs)
 25. [Reverse Nodes In K Group](https://redquark.org/leetcode/0025-reverse-nodes-in-k-group)
-26. [Remove Duplicates From Sorted Array](https://redquark.org/leetcode/0026-remove-duplicates-from-sorted-arrays)
+26. [Remove Duplicates From Sorted Array](https://redquark.org/leetcode/0026-remove-duplicates-from-sorted-array)
 27. [Remove Element](https://redquark.org/leetcode/0027-remove-element)
 28. [Implement StrStr](https://redquark.org/leetcode/0028-implement-strstr)
 29. [Divide Two Integers](https://redquark.org/leetcode/0029-divide-two-integers)
