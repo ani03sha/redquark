@@ -94,3 +94,11 @@ A hash function formerly called ***[Keccak](https://en.wikipedia.org/wiki/SHA-3)
 It is an asymmetric cryptography algorithm. Since it works on different keys, **public** and **private**, it is called asymmetric. We know that it is tough to factorize a large integer. RSA takes advantage of this fact and generates public and private keys accordingly.
 
 We take two large prime numbers and our public key is a multiplication of those two prime numbers. Private key is also derived from the same two prime numbers. To compromise the private key, it is imperative to factor the large numbers. Since, they are prime, it is difficult. Thus, the strength of our encryption lies on the key size.
+
+# Conclusion
+
+In this post, we looked into the most popular topics in computer science - Hashing. We looked at what hashing it, ow it works and what are the different types of hashing algorithms we have. I hope you enjoyed this post.
+
+I would love to hear your thoughts on this and would like to have suggestions from you to make it better. 
+
+Happy coding and Namaste :smile:.
