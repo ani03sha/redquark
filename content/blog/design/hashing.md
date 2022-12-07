@@ -97,7 +97,7 @@ We take two large prime numbers and our public key is a multiplication of those 
 
 # Conclusion
 
-In this post, we looked into the most popular topics in computer science - Hashing. We looked at what hashing it, ow it works and what are the different types of hashing algorithms we have. I hope you enjoyed this post.
+In this post, we looked into the most popular topics in computer science - Hashing. We looked at what hashing it, how it works and what are the different types of hashing algorithms we have. I hope you enjoyed this post.
 
 I would love to hear your thoughts on this and would like to have suggestions from you to make it better. 
 
