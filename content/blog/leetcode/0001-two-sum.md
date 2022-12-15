@@ -10,7 +10,7 @@ Hello happy people :wave:! Today we are going to discuss the very first problem 
 [0001 - Two Sum](https://leetcode.com/problems/two-sum/).
 
 ## Problem Statement
-Given an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`.
+Given an [array](https://www.scaler.com/topics/data-structures/array-data-structure/) of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`.
 
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
 

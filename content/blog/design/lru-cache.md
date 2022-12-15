@@ -2,7 +2,7 @@
 title: 'LRU Cache'
 date: 2022-11-08 12:09:00
 category: 'Design'
-draft: false
+draft: true
 ---
 
 Hello fellow developers :wave:! In the [last post](https//redquark.org/design/caching), we looked into the concept of caching, why do we need caching, what challenges we may face and so on. In this post, we will discuss about one of the most popular caching strategy called **Least Recently Used (LRU)** cache.

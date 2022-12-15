@@ -2,7 +2,7 @@
 title: 'Latency, Throughput and Availability'
 date: 2022-11-12 19:47:00
 category: 'Design'
-draft: false
+draft: true
 ---
 
 Hello fellow developers :wave:! This post is going to be an interesting one as in this post we will be discussing the concepts related to a highly performant and reliable application. We always strive to design applications that are fast and reliable. If your application is slow, no one will want to use it. And if your application is down even for a few minutes, people go nuts and start tweeting about it using hashtags like <b style="color:blue;">#facebookdown</b>, <b style="color:blue;">#instagramdown</b>, and many more.

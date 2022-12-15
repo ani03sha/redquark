@@ -2,7 +2,7 @@
 title: 'LFU Cache'
 date: 2022-11-08 19:24:00
 category: 'Design'
-draft: false
+draft: true
 ---
 
 Hello fellow developers :wave:! In the last [post](https://redquark.org/design/lru-cache) we discussed about one caching strategy and in this post, we will be discussing another caching strategy - **Least Frequently Used (LFU)** cache.

@@ -2,7 +2,7 @@
 title: 'Network Protocols - Part II'
 date: 2022-11-05 05:34:00
 category: 'Design'
-draft: false
+draft: true
 ---
 
 Hey happy people :wave:! In the previous [post](https://redquark.org/design/network-protocols-1/), we had discussed different protocols and the two networking models - OSI and TCP/IP. However, the discussion in the previous post was quite comprehensive, the depth of this subject demands another post where we will dive deep into the most common and important protocols. 
