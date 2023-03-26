@@ -1,8 +1,8 @@
 ---
 title: 'Arrays'
-date: 2023-3-25 21:15:00
+date: 2023-3-26 18:45:00
 category: 'Data Structures & Algorithms'
-draft: false
+draft: true
 ---
 
 Arrays are one of the most common data structures used in programming. An array is a collection of elements of the same type, arranged in contiguous memory locations. They are used to store and manipulate a group of related data items. In this blog post, we'll explore the basics of arrays, how they are used in programming, and how memory is allocated for arrays. Later on, we will also discuss some of the limitations of arrays and see how we can use dynamic arrays to overcome some of the problems.
