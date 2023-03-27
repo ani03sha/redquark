@@ -16,6 +16,8 @@ lang: 'en'
 1. [Introduction To Data Structures & Algorithms](https://redquark.org/dsa/introduction/)
 2. [Analysis Of Algorithms](https://redquark.org/dsa/analysis-of-algorithms/)
 3. [Asymptotic Notations](https://redquark.org/dsa/asymptotic-notations/)
+4. [Abstract Data Types](https://redquark.org/dsa/abstract-data-types/)
+5. [Arrays](https://redquark.org/dsa/arrays)
 
 ### Concept Of The Day
 1. [Kadane Algorithm](https://redquark.org/cotd/kadane_algorithm/)
