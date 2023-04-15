@@ -18,7 +18,7 @@ lang: 'en'
 3. [Asymptotic Notations](https://redquark.org/dsa/asymptotic-notations/)
 4. [Abstract Data Types](https://redquark.org/dsa/abstract-data-types/)
 5. [Arrays](https://redquark.org/dsa/arrays/)
-6. [Singly Linked List](https://redquark.org/dsa/singly-linked-list/)
+6. [Linked List](https://redquark.org/dsa/linked-lists/)
 
 ### Concept Of The Day
 1. [Kadane Algorithm](https://redquark.org/cotd/kadane_algorithm/)
